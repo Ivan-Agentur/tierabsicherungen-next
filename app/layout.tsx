@@ -18,7 +18,7 @@ const playfair = Playfair_Display({
 export const metadata: Metadata = {
   title: "tierabsicherungen.de – Tierkrankenversicherung mit Herz",
   description:
-    "Tierkrankenversicherung für Hund & Katze. Persönliche Beratung durch Ruben Wölker. Alle Tierärzte in Deutschland akzeptiert.",
+    "Tierkrankenversicherung für Hund & Katze. Persönliche Beratung durch Ivan Aziablé. Alle Tierärzte in Deutschland akzeptiert.",
 };
 
 export default function RootLayout({

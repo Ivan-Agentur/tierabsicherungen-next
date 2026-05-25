@@ -1,0 +1,48 @@
+# Beispiel `starto.yaml` für Git-basiertes Deploy zu Starto
+#
+# Hinweise: Ersetze Platzhalter (`<...>`) mit deinen Werten.
+
+name: tierabsicherungen-next
+provider: starto
+
+# Quelle: git (Starto zieht das Repo und führt den Build aus)
+source:
+  type: git
+  repository: <git-repo-url>
+  branch: main
+
+build:
+  # Befehl, der beim Deploy ausgeführt wird
+  command: npm ci && npm run build
+  # optionales Arbeitsverzeichnis
+  working_dir: .
+  env:
+    NODE_ENV: production
+
+run:
+  # Start-Befehl; Starto stellt üblicherweise $PORT zur Verfügung
+  command: npm run start -- -p $PORT
+
+runtime:
+  engine: node
+  # Wähle eine passende Node-Version (z. B. 18, 20)
+  node_version: 18.x
+
+# Beispiel für Umgebungsvariablen, die über das Dashboard gesetzt werden können
+env:
+  NEXT_PUBLIC_API_URL: ${NEXT_PUBLIC_API_URL} # Fallback auf Starto-Env
+
+# Secrets: Liste von Secret-Namen, die im Starto-Dashboard hinterlegt sind
+secrets:
+  - name: API_KEY
+
+# Optional: Healthcheck (falls Starto das unterstützt)
+healthcheck:
+  path: /api/health
+  interval: 30s
+
+# Optional: Einstellungen für Branch-Previews
+previews:
+  enabled: true
+  branches:
+    - feature/*

@@ -29,7 +29,7 @@ const tarife = [
   },
   {
     name: "Premiumschutz",
-    tagline: "Damit du im Ernstfall einfach das Beste für dein Tier entscheiden kannst.",
+    tagline: "Damit Sie im Ernstfall einfach das Beste für Ihr Tier entscheiden können.",
     erstattung: "100 %",
     features: [
       "Unbegrenzte Jahresleistung",
@@ -59,11 +59,11 @@ export default function Tarife() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-start">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
           {tarife.map((t) => (
             <div
               key={t.name}
-              className={`relative bg-white rounded-2xl p-8 border transition-all duration-300 hover:-translate-y-1 hover:shadow-xl ${
+              className={`relative flex h-full flex-col bg-white rounded-2xl p-8 border transition-all duration-300 hover:-translate-y-1 hover:shadow-xl ${
                 t.recommended
                   ? "border-[var(--gold)] border-2 shadow-[0_4px_24px_rgba(200,118,42,.18)]"
                   : "border-[var(--border-col)]"
@@ -106,13 +106,13 @@ export default function Tarife() {
 
               <a
                 href="#kontakt"
-                className={`flex items-center justify-center gap-2 w-full py-3 rounded-xl font-semibold text-sm transition-all ${
+                className={`flex items-center justify-center gap-2 w-full py-3 rounded-xl font-semibold text-sm transition-all mt-auto ${
                   t.recommended
                     ? "bg-[var(--gold)] text-white hover:bg-[#b5671e] hover:shadow-md"
                     : "border-2 border-[var(--navy)] text-[var(--navy)] hover:bg-[var(--navy)] hover:text-white"
                 }`}
               >
-                Jetzt anfragen
+                Rückruf anfordern
               </a>
             </div>
           ))}

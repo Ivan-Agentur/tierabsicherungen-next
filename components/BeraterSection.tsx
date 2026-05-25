@@ -9,7 +9,7 @@ export default function BeraterSection() {
           <div className="w-24 h-24 rounded-full bg-[var(--navy)] flex items-center justify-center text-white font-bold text-2xl shrink-0 border-4 border-[var(--cream-dark)]"
             style={{ fontFamily: "var(--font-playfair)" }}
           >
-            RW
+            IA
           </div>
 
           <div className="flex-1 text-center md:text-left">
@@ -20,23 +20,16 @@ export default function BeraterSection() {
               className="text-3xl text-[var(--navy)] mb-1"
               style={{ fontFamily: "var(--font-playfair)" }}
             >
-              Ruben Wölker
+              Ivan Aziablé
             </h2>
             <p className="text-xs text-gray-400 mb-4">
-              IHK-registrierter Versicherungsmakler · Reg.-Nr. xyzabc
+              IHK-registrierter Versicherungsmakler · Reg.-Nr. D-JA31-D7W20-08
             </p>
             <p className="text-sm text-gray-500 leading-relaxed mb-6 max-w-lg">
               Ich begleite Sie und Ihr Tier persönlich – von der Tarifwahl bis zur
               Schadensabwicklung. Sprechen Sie mich an, ich nehme mir Zeit für Sie.
             </p>
             <div className="flex flex-wrap gap-3 justify-center md:justify-start">
-              <a
-                href="tel:015222636356"
-                className="flex items-center gap-2 bg-[var(--gold)] text-white px-5 py-2.5 rounded-xl font-semibold text-sm hover:bg-[#b5671e] transition-all hover:-translate-y-0.5 hover:shadow-md"
-              >
-                <PhoneCall size={16} />
-                0152 22636356
-              </a>
               <a
                 href="mailto:info@tierabsicherungen.de"
                 className="flex items-center gap-2 border-2 border-[var(--navy)] text-[var(--navy)] px-5 py-2.5 rounded-xl font-semibold text-sm hover:bg-[var(--navy)] hover:text-white transition-all hover:-translate-y-0.5"

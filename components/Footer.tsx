@@ -12,7 +12,7 @@ export default function Footer() {
           </span>
         </div>
         <p className="text-white/40 text-xs">
-          © 2024 tierabsicherungen.de · Ruben Wölker · IHK-Reg.-Nr. xyzabc
+          © 2024 tierabsicherungen.de · Ivan Aziablé · IHK-Reg.-Nr. D-JA31-D7W20-08
         </p>
         <div className="flex gap-5">
           <a href="#" className="text-white/40 text-xs hover:text-[var(--gold-light)] transition-colors">

@@ -60,7 +60,7 @@ export default function Hero() {
                 className="w-12 h-12 rounded-full bg-[var(--navy)] text-white flex items-center justify-center font-bold text-sm shrink-0"
                 style={{ fontFamily: "var(--font-playfair)" }}
               >
-                RW
+                IA
               </div>
               <div>
                 <p className="text-xs uppercase tracking-widest text-gray-400 font-semibold">
@@ -70,7 +70,7 @@ export default function Hero() {
                   className="text-[var(--navy)] font-bold text-base leading-tight"
                   style={{ fontFamily: "var(--font-playfair)" }}
                 >
-                  Ruben Wölker
+                  Ivan Aziablé
                 </p>
                 <p className="text-xs text-gray-400 mt-0.5">IHK-reg. Versicherungsmakler</p>
               </div>
@@ -78,22 +78,6 @@ export default function Hero() {
 
             {/* Kontaktdaten */}
             <div className="bg-white rounded-2xl border border-[var(--border-col)] p-5 flex flex-col gap-4">
-              <div className="flex items-center gap-3">
-                <div className="w-9 h-9 rounded-lg bg-[var(--cream)] flex items-center justify-center shrink-0">
-                  <PhoneCall size={18} className="text-[var(--gold)]" />
-                </div>
-                <div>
-                  <span className="block text-xs uppercase tracking-widest text-gray-400 font-semibold">
-                    Telefon
-                  </span>
-                  <a
-                    href="tel:015222636356"
-                    className="font-semibold text-[var(--navy)] text-sm hover:text-[var(--gold)] transition-colors"
-                  >
-                    0152 22636356
-                  </a>
-                </div>
-              </div>
               <div className="flex items-center gap-3">
                 <div className="w-9 h-9 rounded-lg bg-[var(--cream)] flex items-center justify-center shrink-0">
                   <Mail size={18} className="text-[var(--gold)]" />
