@@ -1,44 +1,39 @@
-import { Check } from "lucide-react";
+import { ArrowRight, Check } from "lucide-react";
 
 const tarife = [
   {
-    name: "Einstiegsschutz",
-    tagline: "Für alle, die zunächst eine Basisabsicherung wünschen.",
-    erstattung: "80 %",
+    name: "Premiumschutz",
+    tagline: "Im Ernstfall das Beste für Ihre Liebsten.",
+    erstattung: "100 %",
     features: [
-      "10.000 € Jahreshöchstleistung",
-      "OP-Schutz inklusive",
-      "Schutz bei Operationen",
-      "Wichtige Behandlungen abgedeckt",
-      "Planbare Tierarztkosten",
+      "Auch bei längerer Genesung abgesichert",
+      "Bereits entstandene Kosten können berücksichtigt werden",
+      "Unterstützung auch bei komplexen Erkrankungen",
+      "Nachsorge, Reha & starke Leistungen",
     ],
-    recommended: false,
+    recommended: true,
   },
   {
     name: "Komfortschutz",
     tagline: "Viel Schutz – bei planbaren Kosten.",
     erstattung: "90 %",
     features: [
-      "Unbegrenzte Jahresleistung",
-      "Heilbehandlungen & OP",
-      "Hohe Kostenübernahme",
-      "OP & Nachbehandlung inklusive",
-      "Schutz bei häufigen Eingriffen",
+      "Starker Schutz bei OP & Behandlung",
+      "Unterstützung auch nach Operationen",
+      "Hohe Kostenübernahme im Ernstfall",
+      "Solider Rundumschutz",
     ],
     recommended: false,
   },
   {
-    name: "Premiumschutz",
-    tagline: "Damit Sie im Ernstfall einfach das Beste für Ihr Tier entscheiden können.",
-    erstattung: "100 %",
+    name: "Einstiegsschutz",
+    tagline: "Für den ersten Schritt zur Absicherung Ihres Haustieres.",
+    erstattung: "80 %",
     features: [
-      "Unbegrenzte Jahresleistung",
-      "Heilpraktiker & Reha inklusive",
-      "Rückwirkender Schutz möglich",
-      "Nachsorge & Therapie inklusive",
-      "Schutz bei schweren Erkrankungen",
+      "Schutz bei wichtigen Operationen",
+      "Hilfe bei unerwarteten Tierarztkosten",
     ],
-    recommended: true,
+    recommended: false,
   },
 ];
 
@@ -106,13 +101,10 @@ export default function Tarife() {
 
               <a
                 href="#kontakt"
-                className={`flex items-center justify-center gap-2 w-full py-3 rounded-xl font-semibold text-sm transition-all mt-auto ${
-                  t.recommended
-                    ? "bg-[var(--gold)] text-white hover:bg-[#b5671e] hover:shadow-md"
-                    : "border-2 border-[var(--navy)] text-[var(--navy)] hover:bg-[var(--navy)] hover:text-white"
-                }`}
+                className="flex items-center justify-center gap-2 w-full py-3.5 rounded-xl font-semibold text-sm transition-all hover:-translate-y-0.5 hover:shadow-lg mt-auto border-2 border-[var(--navy)] text-[var(--navy)] hover:bg-[var(--navy)] hover:text-white"
               >
-                Rückruf anfordern
+                Jetzt anfragen
+                <ArrowRight size={16} />
               </a>
             </div>
           ))}

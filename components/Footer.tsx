@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Footer() {
   return (
     <footer className="bg-[var(--navy)] py-7">
@@ -12,15 +14,15 @@ export default function Footer() {
           </span>
         </div>
         <p className="text-white/40 text-xs">
-          © 2024 tierabsicherungen.de · Ivan Aziablé · IHK-Reg.-Nr. D-JA31-D7W20-08
+          © 2026 tierabsicherungen.de · Ivan Aziablé · IHK-Reg.-Nr. D-JA31-D7W20-08
         </p>
         <div className="flex gap-5">
-          <a href="#" className="text-white/40 text-xs hover:text-[var(--gold-light)] transition-colors">
+          <a href="#" className="text-xs transition-colors hover:text-[var(--gold-light)]" style={{ color: '#ffffff' }}>
             Impressum
           </a>
-          <a href="#" className="text-white/40 text-xs hover:text-[var(--gold-light)] transition-colors">
+          <Link href="/datenschutz" className="text-xs transition-colors hover:text-[var(--gold-light)]" style={{ color: '#ffffff' }}>
             Datenschutz
-          </a>
+          </Link>
         </div>
       </div>
     </footer>

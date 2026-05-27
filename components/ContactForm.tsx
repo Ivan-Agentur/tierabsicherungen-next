@@ -2,24 +2,27 @@
 
 import { useState } from "react";
 import { ArrowRight, CheckCircle, Lock, AlertCircle } from "lucide-react";
-import { submitContactToHubSpot } from "@/app/actions/submitContact";
+import { submitContact } from "@/app/actions/submitContact";
 
 type FormData = {
   vorname: string;
   nachname: string;
   email: string;
   telefon: string;
+  haustiername: string;
   tierart: string;
   gechipt: string;
   alter: string;
   rasse: string;
-  termin: string;
+  wannAnrufen: string;
   fragen: string;
+  datenschutz: boolean;
 };
 
 const initial: FormData = {
   vorname: "", nachname: "", email: "", telefon: "",
-  tierart: "", gechipt: "", alter: "", rasse: "", termin: "", fragen: "",
+  haustiername: "", tierart: "", gechipt: "", alter: "", rasse: "",
+  wannAnrufen: "", fragen: "", datenschutz: false,
 };
 
 export default function ContactForm() {
@@ -30,13 +33,15 @@ export default function ContactForm() {
   const [errors, setErrors] = useState<Partial<Record<keyof FormData, boolean>>>({});
 
   const required: (keyof FormData)[] = [
-    "vorname", "nachname", "email", "telefon", "tierart", "gechipt", "alter", "termin",
+    "vorname", "nachname", "email", "telefon", "haustiername",
+    "tierart", "gechipt", "alter", "wannAnrufen", "datenschutz",
   ];
 
   function validate() {
     const next: typeof errors = {};
     required.forEach((k) => {
-      if (!data[k].trim()) next[k] = true;
+      const v = data[k];
+      if (typeof v === "boolean" ? !v : !String(v).trim()) next[k] = true;
     });
     if (data.email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email))
       next.email = true;
@@ -47,19 +52,19 @@ export default function ContactForm() {
     e.preventDefault();
     const errs = validate();
     if (Object.keys(errs).length) { setErrors(errs); return; }
-    
+
     setLoading(true);
     setError(null);
 
-    const result = await submitContactToHubSpot(data);
-    
+    const result = await submitContact(data);
+
     if (result.success) {
       setSubmitted(true);
       setData(initial);
     } else {
-      setError(result.error || "Fehler beim Absenden des Formulars. Bitte versuchen Sie es später erneut.");
+      setError(result.error || "Fehler beim Absenden. Bitte versuchen Sie es später erneut.");
     }
-    
+
     setLoading(false);
   }
 
@@ -81,7 +86,7 @@ export default function ContactForm() {
       </label>
       <input
         type={type}
-        value={data[key]}
+        value={data[key] as string}
         onChange={(e) => {
           setData((p) => ({ ...p, [key]: e.target.value }));
           setErrors((p) => ({ ...p, [key]: false }));
@@ -140,11 +145,15 @@ export default function ContactForm() {
           {field("telefon", "Telefonnummer", "tel", "+49 152 …")}
         </div>
 
+        <div className="grid grid-cols-1 gap-4">
+          {field("haustiername", "Name des Haustieres", "text", "z. B. Bello")}
+        </div>
+
         <div className="grid grid-cols-2 gap-4">
-          {/* Tierart Select */}
+          {/* Haustierart */}
           <div className="flex flex-col gap-1">
             <label className="text-xs font-semibold uppercase tracking-wide text-[var(--navy)]">
-              Tierart <span className="text-[var(--gold)]">*</span>
+              Haustierart <span className="text-[var(--gold)]">*</span>
             </label>
             <select
               value={data.tierart}
@@ -164,53 +173,65 @@ export default function ContactForm() {
             </select>
           </div>
 
+          {/* Gechipt */}
           <div className="flex flex-col gap-1">
             <label className="text-xs font-semibold uppercase tracking-wide text-[var(--navy)]">
-              Ist Ihr Tier gechipt? <span className="text-[var(--gold)]">*</span>
+              Ist Ihr Haustier gechipt? <span className="text-[var(--gold)]">*</span>
             </label>
-            <div className="flex items-center gap-4">
-              <label className="inline-flex items-center gap-2 text-sm">
-                <input
-                  type="radio"
-                  name="gechipt"
-                  value="ja"
-                  checked={data.gechipt === "ja"}
-                  onChange={(e) => {
-                    setData((p) => ({ ...p, gechipt: e.target.value }));
-                    setErrors((p) => ({ ...p, gechipt: false }));
-                  }}
-                  className="h-4 w-4 accent-[var(--gold)]"
-                />
-                Ja
-              </label>
-              <label className="inline-flex items-center gap-2 text-sm">
-                <input
-                  type="radio"
-                  name="gechipt"
-                  value="nein"
-                  checked={data.gechipt === "nein"}
-                  onChange={(e) => {
-                    setData((p) => ({ ...p, gechipt: e.target.value }));
-                    setErrors((p) => ({ ...p, gechipt: false }));
-                  }}
-                  className="h-4 w-4 accent-[var(--gold)]"
-                />
-                Nein
-              </label>
+            <div className="flex items-center gap-4 pt-1">
+              {["ja", "nein"].map((v) => (
+                <label key={v} className="inline-flex items-center gap-2 text-sm cursor-pointer">
+                  <input
+                    type="radio"
+                    name="gechipt"
+                    value={v}
+                    checked={data.gechipt === v}
+                    onChange={(e) => {
+                      setData((p) => ({ ...p, gechipt: e.target.value }));
+                      setErrors((p) => ({ ...p, gechipt: false }));
+                    }}
+                    className="h-4 w-4 accent-[var(--gold)]"
+                  />
+                  {v.charAt(0).toUpperCase() + v.slice(1)}
+                </label>
+              ))}
             </div>
-            {errors.gechipt ? (
-              <p className="text-red-500 text-xs mt-1">Bitte wählen Sie Ja oder Nein.</p>
-            ) : null}
+            {errors.gechipt && <p className="text-red-500 text-xs mt-1">Bitte wählen Sie Ja oder Nein.</p>}
           </div>
         </div>
 
         <div className="grid grid-cols-2 gap-4">
-          {field("alter", "Alter des Tiers", "text", "z. B. 3 Jahre")}
+          {field("alter", "Alter des Haustieres", "text", "z. B. 3 Jahre")}
           {field("rasse", "Rasse", "text", "z. B. Labrador", true)}
         </div>
 
-        <div className="grid grid-cols-1 gap-4">
-          {field("termin", "Wunschtermin Rückruf", "datetime-local", undefined)}
+        {/* Wann anrufen */}
+        <div className="flex flex-col gap-1">
+          <label className="text-xs font-semibold uppercase tracking-wide text-[var(--navy)]">
+            Wann sollen wir Sie anrufen? <span className="text-[var(--gold)]">*</span>
+          </label>
+          <div className="flex items-center gap-4 pt-1">
+            {[
+              { value: "vormittags", label: "Vormittags" },
+              { value: "abends", label: "Abends" },
+            ].map(({ value, label }) => (
+              <label key={value} className="inline-flex items-center gap-2 text-sm cursor-pointer">
+                <input
+                  type="radio"
+                  name="wannAnrufen"
+                  value={value}
+                  checked={data.wannAnrufen === value}
+                  onChange={(e) => {
+                    setData((p) => ({ ...p, wannAnrufen: e.target.value }));
+                    setErrors((p) => ({ ...p, wannAnrufen: false }));
+                  }}
+                  className="h-4 w-4 accent-[var(--gold)]"
+                />
+                {label}
+              </label>
+            ))}
+          </div>
+          {errors.wannAnrufen && <p className="text-red-500 text-xs mt-1">Bitte wählen Sie eine Zeit.</p>}
         </div>
 
         {/* Fragen */}
@@ -226,6 +247,29 @@ export default function ContactForm() {
             placeholder="Was möchten Sie gerne wissen?"
             className="px-3.5 py-2.5 border border-[var(--border-col)] rounded-xl text-sm outline-none resize-y focus:border-[var(--navy)] focus:ring-2 focus:ring-[var(--navy)]/10 transition-all"
           />
+        </div>
+
+        {/* Datenschutz */}
+        <div className="flex flex-col gap-1">
+          <label className={`flex items-start gap-3 cursor-pointer ${errors.datenschutz ? "text-red-500" : "text-gray-500"}`}>
+            <input
+              type="checkbox"
+              checked={data.datenschutz}
+              onChange={(e) => {
+                setData((p) => ({ ...p, datenschutz: e.target.checked }));
+                setErrors((p) => ({ ...p, datenschutz: false }));
+              }}
+              className="mt-0.5 w-4 h-4 accent-[var(--gold)] shrink-0"
+            />
+            <span className="text-sm leading-snug">
+              Ich akzeptiere die{" "}
+              <a href="https://tierabsicherungen.de/datenschutz" className="text-[var(--navy)] underline hover:text-[var(--gold)]">
+                Datenschutzvereinbarung
+              </a>{" "}
+              und erlaube tierabsicherungen.de, meine Daten zu speichern und zu verwenden.{" "}
+              <span className="text-[var(--gold)]">*</span>
+            </span>
+          </label>
         </div>
 
         <button
