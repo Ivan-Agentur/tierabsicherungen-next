@@ -213,6 +213,7 @@ export default function ContactForm() {
           <div className="flex items-center gap-4 pt-1">
             {[
               { value: "vormittags", label: "Vormittags" },
+              { value: "nachmittags", label: "Nachmittags" },
               { value: "abends", label: "Abends" },
             ].map(({ value, label }) => (
               <label key={value} className="inline-flex items-center gap-2 text-sm cursor-pointer">
