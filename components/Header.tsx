@@ -35,7 +35,7 @@ export default function Header() {
                 className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
                   active
                     ? "bg-[var(--gold)] text-white"
-                    : "text-white/75 hover:text-white hover:bg-white/10"
+                    : "text-[var(--gold)] hover:text-white hover:bg-white/10"
                 }`}
               >
                 {link.label}
