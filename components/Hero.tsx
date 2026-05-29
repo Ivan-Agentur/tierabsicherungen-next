@@ -14,9 +14,8 @@ export default function Hero() {
             className="text-4xl md:text-5xl text-[var(--navy)] mb-3"
             style={{ fontFamily: "var(--font-playfair)" }}
           >
-            Begleiter fürs <em>Leben</em>
-            <br />
-            verdienen Schutz fürs <em>Leben</em>
+            Versicherungen, die perfekt zu den Bedürfnissen Ihrer{" "}
+            <em className="text-[var(--gold)]">Liebsten</em> passen!
           </h1>
           <p className="text-gray-400 text-base max-w-lg mx-auto">
             Jetzt kostenlos beraten lassen – persönlich, unverbindlich,
