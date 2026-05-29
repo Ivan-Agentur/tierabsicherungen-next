@@ -110,7 +110,7 @@ export default function TarifePage() {
 
         {/* Tariff Cards Summary */}
         <section className="py-10 px-6 bg-white border-b border-[var(--border-col)]">
-          <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-5">
+          <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-5 items-stretch">
             {[
               {
                 name: "Premiumschutz",
@@ -139,7 +139,7 @@ export default function TarifePage() {
             ].map((t) => (
               <div
                 key={t.name}
-                className={`relative rounded-2xl p-6 border bg-white ${t.color} ${
+                className={`relative flex flex-col h-full rounded-2xl p-6 border bg-white ${t.color} ${
                   t.recommended
                     ? "shadow-[0_4px_24px_rgba(200,118,42,.15)]"
                     : ""
@@ -164,7 +164,7 @@ export default function TarifePage() {
                 </div>
                 <Link
                   href="/#kontakt"
-                  className="mt-4 flex items-center justify-center gap-2 w-full py-3 rounded-xl font-semibold text-sm border-2 border-[var(--navy)] text-[var(--navy)]"
+                  className="mt-auto pt-4 flex items-center justify-center gap-2 w-full py-3 rounded-xl font-semibold text-sm border-2 border-[var(--navy)] text-[var(--navy)]"
                 >
                   Jetzt anfragen
                   <ArrowRight size={15} />
@@ -199,7 +199,7 @@ export default function TarifePage() {
                       <span className="block text-xs sm:text-base text-[var(--gold)]">Premium</span>
                       <span className="hidden sm:block text-xs text-[var(--gold-light)]/70 font-normal mt-0.5">Höchste Ansprüche</span>
                     </th>
-                    <th className="px-2 sm:px-4 py-4 text-center font-semibold w-1/5">
+                    <th className="px-2 sm:px-4 py-4 text-center font-semibold w-1/5 border-r border-white/20">
                       <span className="block text-xs sm:text-base">Komfort</span>
                       <span className="hidden sm:block text-xs text-white/50 font-normal mt-0.5">Plus an Sicherheit</span>
                     </th>
@@ -242,7 +242,7 @@ export default function TarifePage() {
                           <td className="px-2 sm:px-4 py-3 sm:py-3.5 text-center border-r-2 border-[var(--gold)]/20">
                             <Cell value={f.premium} />
                           </td>
-                          <td className="px-2 sm:px-4 py-3 sm:py-3.5 text-center">
+                          <td className="px-2 sm:px-4 py-3 sm:py-3.5 text-center border-r border-[var(--cream-dark)]">
                             <Cell value={f.komfort} />
                           </td>
                           <td className="px-2 sm:px-4 py-3 sm:py-3.5 text-center">
