@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 
@@ -10,8 +9,10 @@ const navLinks = [
   { label: "Tarife", href: "/tarife" },
 ];
 
+const navBtnClass = "px-4 py-2 rounded-lg text-sm font-semibold bg-[var(--gold)] text-white";
+const navBtnMobileClass = "px-4 py-3 rounded-lg text-sm font-semibold text-center bg-[var(--gold)] text-white";
+
 export default function Header() {
-  const pathname = usePathname();
   const [open, setOpen] = useState(false);
 
   return (
@@ -20,30 +21,17 @@ export default function Header() {
         <Link href="/" className="flex items-center gap-2 shrink-0" onClick={() => setOpen(false)}>
           <span className="text-2xl">🐾</span>
           <span className="font-bold text-base sm:text-lg text-white" style={{ fontFamily: "var(--font-playfair)" }}>
-            <span className="hidden xs:inline">tierabsicherungen</span>
-            <span className="xs:hidden">tierabsich.</span>
-            <span className="text-[var(--gold)]">.de</span>
+            tierabsicherungen<span className="text-[var(--gold)]">.de</span>
           </span>
         </Link>
 
         {/* Desktop nav */}
         <nav className="hidden sm:flex items-center gap-2">
-          {navLinks.map((link) => {
-            const active = pathname === link.href;
-            return (
-              <Link
-                key={link.href}
-                href={link.href}
-                className={`px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-200 border-2 ${
-                  active
-                    ? "bg-[var(--gold)] border-[var(--gold)] text-white"
-                    : "border-[var(--gold)] text-[var(--gold)] hover:bg-[var(--gold)] hover:text-white"
-                }`}
-              >
-                {link.label}
-              </Link>
-            );
-          })}
+          {navLinks.map((link) => (
+            <Link key={link.href} href={link.href} className={navBtnClass}>
+              {link.label}
+            </Link>
+          ))}
         </nav>
 
         {/* Mobile hamburger */}
@@ -59,23 +47,11 @@ export default function Header() {
       {/* Mobile dropdown */}
       {open && (
         <div className="sm:hidden bg-[var(--navy)] border-t border-white/10 px-6 py-4 flex flex-col gap-2">
-          {navLinks.map((link) => {
-            const active = pathname === link.href;
-            return (
-              <Link
-                key={link.href}
-                href={link.href}
-                onClick={() => setOpen(false)}
-                className={`px-4 py-3 rounded-lg text-sm font-semibold text-center transition-all duration-200 border-2 ${
-                  active
-                    ? "bg-[var(--gold)] border-[var(--gold)] text-white"
-                    : "border-[var(--gold)] text-[var(--gold)] hover:bg-[var(--gold)] hover:text-white"
-                }`}
-              >
-                {link.label}
-              </Link>
-            );
-          })}
+          {navLinks.map((link) => (
+            <Link key={link.href} href={link.href} onClick={() => setOpen(false)} className={navBtnMobileClass}>
+              {link.label}
+            </Link>
+          ))}
         </div>
       )}
     </header>

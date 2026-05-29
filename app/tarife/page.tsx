@@ -164,7 +164,7 @@ export default function TarifePage() {
                 </div>
                 <Link
                   href="/#kontakt"
-                  className="mt-4 flex items-center justify-center gap-2 w-full py-3 rounded-xl font-semibold text-sm transition-all hover:-translate-y-0.5 hover:shadow-lg border-2 border-[var(--navy)] text-[var(--navy)] hover:bg-[var(--navy)] hover:text-white"
+                  className="mt-4 flex items-center justify-center gap-2 w-full py-3 rounded-xl font-semibold text-sm border-2 border-[var(--navy)] text-[var(--navy)]"
                 >
                   Jetzt anfragen
                   <ArrowRight size={15} />

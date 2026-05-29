@@ -101,7 +101,7 @@ export default function Tarife() {
 
               <a
                 href="#kontakt"
-                className="flex items-center justify-center gap-2 w-full py-3.5 rounded-xl font-semibold text-sm transition-all hover:-translate-y-0.5 hover:shadow-lg mt-auto border-2 border-[var(--navy)] text-[var(--navy)] hover:bg-[var(--navy)] hover:text-white"
+                className="flex items-center justify-center gap-2 w-full py-3.5 rounded-xl font-semibold text-sm mt-auto border-2 border-[var(--navy)] text-[var(--navy)]"
               >
                 Jetzt anfragen
                 <ArrowRight size={16} />
