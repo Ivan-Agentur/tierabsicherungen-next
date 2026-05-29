@@ -1,4 +1,5 @@
-import Link from "next/link";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 export const metadata = {
   title: "Datenschutzerklärung – tierabsicherungen.de",
@@ -8,23 +9,7 @@ export const metadata = {
 export default function Datenschutz() {
   return (
     <>
-      {/* Header */}
-      <header className="bg-[var(--navy)] sticky top-0 z-50 shadow-[0_2px_12px_rgba(0,0,0,.18)]">
-        <div className="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between gap-4">
-          <Link href="/" className="flex items-center gap-2">
-            <span className="text-2xl">🐾</span>
-            <span className="font-bold text-lg text-white" style={{ fontFamily: "var(--font-playfair)" }}>
-              tierabsicherungen<span className="text-[var(--gold)]">.de</span>
-            </span>
-          </Link>
-          <Link
-            href="/"
-            className="text-white/70 text-sm hover:text-[var(--gold)] transition-colors hidden sm:block"
-          >
-            ← Zurück zur Startseite
-          </Link>
-        </div>
-      </header>
+      <Header />
 
       {/* Content */}
       <main className="bg-[var(--cream)] min-h-screen py-16 px-6">
@@ -129,24 +114,7 @@ export default function Datenschutz() {
         </div>
       </main>
 
-      {/* Footer */}
-      <footer className="bg-[var(--navy)] py-7">
-        <div className="max-w-5xl mx-auto px-6 flex flex-wrap items-center justify-between gap-4">
-          <div className="flex items-center gap-2">
-            <span className="text-xl">🐾</span>
-            <span className="font-bold text-white text-sm" style={{ fontFamily: "var(--font-playfair)" }}>
-              tierabsicherungen<span className="text-[var(--gold)]">.de</span>
-            </span>
-          </div>
-          <p className="text-white/40 text-xs">
-            © 2026 tierabsicherungen.de · Ivan Aziablé · IHK-Reg.-Nr. D-JA31-D7W20-08
-          </p>
-          <div className="flex gap-5">
-            <a href="#" className="text-white text-xs hover:text-[var(--gold-light)] transition-colors">Impressum</a>
-            <Link href="/datenschutz" className="text-white text-xs hover:text-[var(--gold-light)] transition-colors">Datenschutz</Link>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </>
   );
 }

@@ -89,7 +89,7 @@ export default function TarifePage() {
 
       <main className="bg-[var(--cream)] min-h-screen">
         {/* Hero */}
-        <section className="bg-[var(--navy)] pt-16 pb-14 px-6">
+        <section className="bg-[var(--navy)] pt-10 pb-10 md:pt-16 md:pb-14 px-6">
           <div className="max-w-3xl mx-auto text-center">
             <p className="text-[var(--gold)] text-sm font-semibold uppercase tracking-widest mb-3">
               Leistungsübersicht
@@ -194,18 +194,18 @@ export default function TarifePage() {
                     <th className="text-left px-5 py-4 font-semibold w-2/5" style={{ fontFamily: "var(--font-playfair)" }}>
                       Leistung
                     </th>
-                    <th className="px-4 py-4 text-center font-semibold w-1/5 relative">
+                    <th className="px-2 sm:px-4 py-4 text-center font-semibold w-1/5 relative">
                       <span className="absolute top-0 inset-x-0 h-0.5 bg-[var(--gold)]" />
-                      <span className="block text-base text-[var(--gold)]">Premiumschutz</span>
-                      <span className="block text-xs text-[var(--gold-light)]/70 font-normal mt-0.5">Höchste Ansprüche</span>
+                      <span className="block text-xs sm:text-base text-[var(--gold)]">Premium</span>
+                      <span className="hidden sm:block text-xs text-[var(--gold-light)]/70 font-normal mt-0.5">Höchste Ansprüche</span>
                     </th>
-                    <th className="px-4 py-4 text-center font-semibold w-1/5">
-                      <span className="block text-base">Komfortschutz</span>
-                      <span className="block text-xs text-white/50 font-normal mt-0.5">Plus an Sicherheit</span>
+                    <th className="px-2 sm:px-4 py-4 text-center font-semibold w-1/5">
+                      <span className="block text-xs sm:text-base">Komfort</span>
+                      <span className="hidden sm:block text-xs text-white/50 font-normal mt-0.5">Plus an Sicherheit</span>
                     </th>
-                    <th className="px-4 py-4 text-center font-semibold w-1/5">
-                      <span className="block text-base">Einstiegsschutz</span>
-                      <span className="block text-xs text-white/50 font-normal mt-0.5">Grundschutz</span>
+                    <th className="px-2 sm:px-4 py-4 text-center font-semibold w-1/5">
+                      <span className="block text-xs sm:text-base">Einstieg</span>
+                      <span className="hidden sm:block text-xs text-white/50 font-normal mt-0.5">Grundschutz</span>
                     </th>
                   </tr>
                 </thead>
@@ -236,16 +236,16 @@ export default function TarifePage() {
                             i % 2 === 0 ? "bg-white" : "bg-[var(--cream)]/30"
                           }`}
                         >
-                          <td className="px-5 py-3.5 text-[var(--foreground)] text-sm leading-snug">
+                          <td className="px-3 sm:px-5 py-3 sm:py-3.5 text-[var(--foreground)] text-xs sm:text-sm leading-snug">
                             {f.label}
                           </td>
-                          <td className="px-4 py-3.5 text-center border-r-2 border-[var(--gold)]/20">
+                          <td className="px-2 sm:px-4 py-3 sm:py-3.5 text-center border-r-2 border-[var(--gold)]/20">
                             <Cell value={f.premium} />
                           </td>
-                          <td className="px-4 py-3.5 text-center">
+                          <td className="px-2 sm:px-4 py-3 sm:py-3.5 text-center">
                             <Cell value={f.komfort} />
                           </td>
-                          <td className="px-4 py-3.5 text-center">
+                          <td className="px-2 sm:px-4 py-3 sm:py-3.5 text-center">
                             <Cell value={f.basis} />
                           </td>
                         </tr>

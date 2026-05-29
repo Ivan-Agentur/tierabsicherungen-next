@@ -118,7 +118,7 @@ export default function ContactForm() {
   }
 
   return (
-    <div className="bg-white rounded-2xl border border-[var(--border-col)] p-8">
+    <div className="bg-white rounded-2xl border border-[var(--border-col)] p-6 sm:p-8">
       <h2
         className="text-xl text-[var(--navy)] mb-5 pb-4 border-b border-[var(--cream-dark)]"
         style={{ fontFamily: "var(--font-playfair)" }}
@@ -135,12 +135,12 @@ export default function ContactForm() {
           </div>
         )}
 
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           {field("vorname", "Vorname", "text", "Max")}
           {field("nachname", "Nachname", "text", "Mustermann")}
         </div>
 
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           {field("email", "E-Mail-Adresse", "email", "max@beispiel.de")}
           {field("telefon", "Telefonnummer", "tel", "+49 152 …")}
         </div>
@@ -149,7 +149,7 @@ export default function ContactForm() {
           {field("haustiername", "Name des Haustieres", "text", "z. B. Bello")}
         </div>
 
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           {/* Haustierart */}
           <div className="flex flex-col gap-1">
             <label className="text-xs font-semibold uppercase tracking-wide text-[var(--navy)]">
@@ -178,7 +178,7 @@ export default function ContactForm() {
             <label className="text-xs font-semibold uppercase tracking-wide text-[var(--navy)]">
               Ist Ihr Haustier gechipt? <span className="text-[var(--gold)]">*</span>
             </label>
-            <div className="flex items-center gap-4 pt-1">
+            <div className="flex flex-wrap items-center gap-x-6 gap-y-2 pt-1">
               {["ja", "nein"].map((v) => (
                 <label key={v} className="inline-flex items-center gap-2 text-sm cursor-pointer">
                   <input
@@ -200,7 +200,7 @@ export default function ContactForm() {
           </div>
         </div>
 
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           {field("alter", "Alter des Haustieres", "text", "z. B. 3 Jahre")}
           {field("rasse", "Rasse", "text", "z. B. Labrador", true)}
         </div>
@@ -210,7 +210,7 @@ export default function ContactForm() {
           <label className="text-xs font-semibold uppercase tracking-wide text-[var(--navy)]">
             Wann sollen wir Sie anrufen? <span className="text-[var(--gold)]">*</span>
           </label>
-          <div className="flex items-center gap-4 pt-1">
+          <div className="flex flex-wrap items-center gap-x-6 gap-y-2 pt-1">
             {[
               { value: "vormittags", label: "Vormittags" },
               { value: "nachmittags", label: "Nachmittags" },
