@@ -157,18 +157,21 @@ export default function TarifePage() {
                   {t.name}
                 </h2>
                 <p className="text-xs text-gray-400 italic mb-3">{t.subtitle}</p>
-                <p className="text-sm text-gray-600 mb-4">{t.tagline}</p>
-                <div className="flex items-center gap-2 text-xs text-gray-500 border-t border-[var(--cream-dark)] pt-3">
-                  <span className="font-semibold text-[var(--navy)]">Höchstgrenze:</span>
-                  <span className="text-[var(--gold)] font-bold">{t.limit}</span>
+                <p className="text-sm text-gray-600">{t.tagline}</p>
+
+                <div className="mt-auto pt-4">
+                  <div className="flex items-center gap-2 text-xs text-gray-500 border-t border-[var(--cream-dark)] pt-3 mb-3">
+                    <span className="font-semibold text-[var(--navy)]">Höchstgrenze:</span>
+                    <span className="text-[var(--gold)] font-bold">{t.limit}</span>
+                  </div>
+                  <Link
+                    href="/#kontakt"
+                    className="flex items-center justify-center gap-2 w-full py-3 rounded-xl font-semibold text-sm border-2 border-[var(--navy)] text-[var(--navy)]"
+                  >
+                    Jetzt anfragen
+                    <ArrowRight size={15} />
+                  </Link>
                 </div>
-                <Link
-                  href="/#kontakt"
-                  className="mt-auto pt-4 flex items-center justify-center gap-2 w-full py-3 rounded-xl font-semibold text-sm border-2 border-[var(--navy)] text-[var(--navy)]"
-                >
-                  Jetzt anfragen
-                  <ArrowRight size={15} />
-                </Link>
               </div>
             ))}
           </div>
