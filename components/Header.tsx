@@ -1,8 +1,20 @@
+"use client";
+
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+
+const navLinks = [
+  { label: "Startseite", href: "/" },
+  { label: "Tarife", href: "/tarife" },
+];
+
 export default function Header() {
+  const pathname = usePathname();
+
   return (
     <header className="bg-[var(--navy)] sticky top-0 z-50 shadow-[0_2px_12px_rgba(0,0,0,.18)]">
       <div className="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between gap-4">
-        <a href="#" className="flex items-center gap-2">
+        <Link href="/" className="flex items-center gap-2">
           <span className="text-2xl">🐾</span>
           <span
             className="font-bold text-lg text-white"
@@ -11,11 +23,26 @@ export default function Header() {
             tierabsicherungen
             <span className="text-[var(--gold)]">.de</span>
           </span>
-        </a>
-        <p className="text-white/85 text-sm text-right hidden sm:block whitespace-nowrap">
-          Ihre Tierkrankenversicherung für Ihre{" "}
-          <span className="text-[var(--gold)]">Liebsten</span>
-        </p>
+        </Link>
+
+        <nav className="flex items-center gap-1">
+          {navLinks.map((link) => {
+            const active = pathname === link.href;
+            return (
+              <Link
+                key={link.href}
+                href={link.href}
+                className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
+                  active
+                    ? "bg-[var(--gold)] text-white"
+                    : "text-white/75 hover:text-white hover:bg-white/10"
+                }`}
+              >
+                {link.label}
+              </Link>
+            );
+          })}
+        </nav>
       </div>
     </header>
   );
