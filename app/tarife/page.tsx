@@ -197,7 +197,7 @@ export default function TarifePage() {
                     <th className="text-left px-5 py-4 font-semibold w-2/5" style={{ fontFamily: "var(--font-playfair)" }}>
                       Leistung
                     </th>
-                    <th className="px-2 sm:px-4 py-4 text-center font-semibold w-1/5 relative">
+                    <th className="px-2 sm:px-4 py-4 text-center font-semibold w-1/5 relative border-r-2 border-[var(--gold)]/40">
                       <span className="absolute top-0 inset-x-0 h-0.5 bg-[var(--gold)]" />
                       <span className="block text-xs sm:text-base text-[var(--gold)]">Premium</span>
                       <span className="hidden sm:block text-xs text-[var(--gold-light)]/70 font-normal mt-0.5">Höchste Ansprüche</span>
