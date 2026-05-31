@@ -6,7 +6,7 @@ import { ChevronDown } from "lucide-react";
 const faqs = [
   {
     q: "Welche Behandlungen sind durch die Versicherung abgedeckt?",
-    a: "Je nach gewähltem Tarif sind ambulante und stationäre Behandlungen, Operationen (einschließlich minimalinvasiver Eingriffe), Chemo- und Strahlentherapie, Voruntersuchungen sowie Nachsorge versichert. Hinzu kommen Diagnostikmaßnahmen wie Röntgen und Blutbild, Schutzimpfungen und Wurmkuren (VorsorgePlus), Medikamente und Verbandmittel sowie die Online-Sprechstunde beim Tierarzt. Ab der Komfortvariante sind zusätzlich spezielle Diagnostik (MRT, CT), Physiotherapie nach einer OP und alternative Heilmethoden wie Akupunktur oder Homöopathie mitversichert. Die Premiumvariante umfasst darüber hinaus Trächtigkeitsuntersuchungen, Geburtshilfe, Tiertransport nach Unfall sowie Schutz für weitere Haustiere (HaustierPlus).",
+    a: "Je nach gewähltem Tarif sind ambulante und stationäre Behandlungen, Operationen (einschließlich minimalinvasiver Eingriffe), Chemo- und Strahlentherapie, Voruntersuchungen sowie Nachsorge versichert. Hinzu kommen Diagnostikmaßnahmen wie Röntgen und Blutbild, Schutzimpfungen und Wurmkuren (VorsorgePlus), Medikamente und Verbandmittel sowie die Online-Sprechstunde beim Tierarzt. Ab der Komfortvariante sind zusätzlich spezielle Diagnostik (MRT, CT), Physiotherapie nach einer OP und alternative Heilmethoden wie Akupunktur oder Homöopathie mitversichert. Die Premiumvariante umfasst darüber hinaus Trächtigkeitsuntersuchungen, Geburtshilfe, Tiertransport nach Unfall sowie Schutz für weitere Tiere (TierPlus).",
   },
   {
     q: "Gibt es ein Mindestalter oder ein Höchstalter für meinen Hund?",
