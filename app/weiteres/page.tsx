@@ -88,11 +88,11 @@ export default function WeiteresPage() {
               Wissenswertes
             </p>
             <h1
-              className="text-4xl md:text-5xl text-white text-center mb-4"
-              style={{ fontFamily: "var(--font-playfair)" }}
+              className="text-4xl md:text-5xl text-center mb-4"
+              style={{ fontFamily: "var(--font-playfair)", color: "white" }}
             >
               Ihr Tier.{" "}
-              <em className="text-white">Ihr Recht.</em>
+              <em style={{ color: "white" }}>Ihr Recht.</em>
             </h1>
             <p className="text-white/70 text-base max-w-xl mx-auto">
               Als Tierhalter stehen Sie manchmal vor rechtlichen Fragen – mit dem Nachbarn,
