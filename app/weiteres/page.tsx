@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { ArrowRight, Scale, Shield, Home, Car, TreePine, Shovel } from "lucide-react";
+import { ArrowRight, Scale, Shield, Home, Car, CalendarCheck } from "lucide-react";
 
 export const metadata = {
   title: "Weiteres – tierabsicherungen.de",
@@ -68,10 +68,10 @@ const rechtstipps = [
       "Ja – wer eine Autoscheibe einschlägt, um ein Tier vor dem Hitzetod zu retten, muss in der Regel keinen Schadensersatz befürchten. Das Gesetz erlaubt es, in einer Notsituation Schäden zu verursachen, um ein höherwertiges Gut zu schützen. Wichtig: Vorher die Polizei oder Feuerwehr rufen, wenn möglich – und den Eingriff dokumentieren.",
   },
   {
-    icon: Shovel,
-    frage: "Darf man ein Haustier im eigenen Garten beerdigen?",
+    icon: CalendarCheck,
+    frage: "Krankes Tier beim Züchter gekauft? Sie sind rückwirkend geschützt.",
     antwort:
-      "Grundsätzlich müssen verstorbene Tiere zu den zuständigen behördlichen Stellen gebracht oder von dort abgeholt werden. Es gibt jedoch Ausnahmen: Unter bestimmten Voraussetzungen – je nach Bundesland und Größe des Tieres – ist eine Bestattung im eigenen Garten erlaubt. Informieren Sie sich vorher bei Ihrer Gemeinde, um rechtliche Probleme zu vermeiden.",
+      "Wenn Sie herausfinden, dass Ihr neu gekauftes Tier bereits beim Kauf krank war, sind Sie nicht schutzlos. Je nach Tarif greift der Rechtsschutz rückwirkend für bis zu drei Monate vor Vertragsbeginn – auch für den Kaufvertrag Ihres Tieres. Das bedeutet: Selbst wenn das Problem schon vor Abschluss der Versicherung entstanden ist, können Sie rechtliche Unterstützung in Anspruch nehmen und Ihre Ansprüche gegenüber dem Züchter geltend machen.",
   },
 ];
 
