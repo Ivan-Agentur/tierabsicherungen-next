@@ -28,8 +28,8 @@ export default function TrustStrip() {
               <Icon size={20} className="text-[var(--gold)]" />
             </div>
             <h3
-              className="text-white font-bold text-base"
-              style={{ fontFamily: "var(--font-playfair)" }}
+              className="text-white font-bold text-lg"
+              style={{ fontFamily: "var(--font-playfair)", color: "#ffffff" }}
             >
               {title}
             </h3>
