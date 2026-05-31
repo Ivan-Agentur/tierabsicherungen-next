@@ -1,5 +1,5 @@
 import ContactForm from "@/components/ContactForm";
-import { Clock, Mail, ShieldCheck } from "lucide-react";
+import { Clock, ShieldCheck } from "lucide-react";
 
 export default function Hero() {
   return (
@@ -27,40 +27,6 @@ export default function Hero() {
           <ContactForm />
 
           <div className="flex flex-col gap-4">
-            {/* Berater-Card */}
-            <div className="bg-white rounded-2xl border border-[var(--border-col)] p-5 flex items-center gap-4">
-              <div
-                className="w-12 h-12 rounded-full bg-[var(--navy)] text-white flex items-center justify-center font-bold text-sm shrink-0"
-                style={{ fontFamily: "var(--font-playfair)" }}
-              >
-                IA
-              </div>
-              <div>
-                <p className="text-xs uppercase tracking-widest text-gray-400 font-semibold">
-                  Ihr persönlicher Berater
-                </p>
-                <p className="text-[var(--navy)] font-bold text-base leading-tight" style={{ fontFamily: "var(--font-playfair)" }}>
-                  Ivan Aziablé
-                </p>
-                <p className="text-xs text-gray-400 mt-0.5">IHK-reg. Versicherungsmakler</p>
-              </div>
-            </div>
-
-            {/* Kontaktdaten */}
-            <div className="bg-white rounded-2xl border border-[var(--border-col)] p-5">
-              <div className="flex items-center gap-3">
-                <div className="w-9 h-9 rounded-lg bg-[var(--cream)] flex items-center justify-center shrink-0">
-                  <Mail size={18} className="text-[var(--gold)]" />
-                </div>
-                <div>
-                  <span className="block text-xs uppercase tracking-widest text-gray-400 font-semibold">E-Mail</span>
-                  <a href="mailto:info@tierabsicherungen.de" className="font-semibold text-[var(--navy)] text-sm hover:text-[var(--gold)] transition-colors">
-                    info@tierabsicherungen.de
-                  </a>
-                </div>
-              </div>
-            </div>
-
             {/* 24h Badge */}
             <div className="bg-[var(--navy)] rounded-2xl p-5 flex items-start gap-4">
               <Clock size={26} className="text-[var(--gold)] shrink-0 mt-0.5" />
