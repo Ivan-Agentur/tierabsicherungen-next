@@ -20,6 +20,13 @@ export const metadata: Metadata = {
   title: "tierabsicherungen.de – Tierkrankenversicherung mit Herz",
   description:
     "Tierkrankenversicherung für Hund & Katze. Persönliche Beratung durch Ivan Aziablé. Alle Tierärzte in Deutschland akzeptiert.",
+  icons: {
+    icon: [
+      { url: "/icon.svg", type: "image/svg+xml" },
+    ],
+    shortcut: "/icon.svg",
+    apple: "/icon.svg",
+  },
 };
 
 export default function RootLayout({
