@@ -132,11 +132,11 @@ export default function TarifePage() {
               Leistungsübersicht
             </p>
             <h1
-              className="text-4xl md:text-5xl text-white mb-4"
+              className="text-4xl md:text-5xl text-white text-center mb-4"
               style={{ fontFamily: "var(--font-playfair)" }}
             >
               Drei Tarife.{" "}
-              <em className="text-[var(--gold)]">Klare</em> Leistungen.
+              <em className="text-white">Klare</em> Leistungen.
             </h1>
             <p className="text-white/70 text-base max-w-xl mx-auto">
               Wählen Sie den Schutz, der zu den Bedürfnissen Ihres Haustieres passt –
