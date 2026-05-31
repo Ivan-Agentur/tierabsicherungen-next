@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import TrustStrip from "@/components/TrustStrip";
 import { ArrowRight, Check, Minus } from "lucide-react";
 
 export const metadata = {
@@ -304,6 +305,8 @@ export default function TarifePage() {
             </p>
           </div>
         </section>
+
+        <TrustStrip />
 
         {/* OP Tariff Intro */}
         <section className="py-14 px-6 bg-[var(--cream)] border-t-4 border-[var(--gold)]">

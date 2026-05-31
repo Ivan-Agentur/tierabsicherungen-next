@@ -1,4 +1,5 @@
 import { ArrowRight, Check } from "lucide-react";
+import TrustStrip from "@/components/TrustStrip";
 
 const tarife = [
   {
@@ -86,6 +87,7 @@ const opTarife = [
 
 export default function Tarife() {
   return (
+    <>
     <section className="py-20 bg-[var(--cream)]" id="tarife">
       <div className="max-w-5xl mx-auto px-6">
         {/* Vollschutz-Tarife */}
@@ -158,6 +160,14 @@ export default function Tarife() {
           ))}
         </div>
 
+        {/* Trust Strip */}
+        </div>
+      </section>
+
+      <TrustStrip />
+
+      <section className="py-20 bg-[var(--cream)]">
+        <div className="max-w-5xl mx-auto px-6">
         {/* Divider OP */}
         <div className="mt-20 mb-12 border-t-2 border-[var(--gold)]/30 pt-16">
           <div className="text-center max-w-xl mx-auto">
@@ -235,5 +245,6 @@ export default function Tarife() {
         </div>
       </div>
     </section>
+    </>
   );
 }
