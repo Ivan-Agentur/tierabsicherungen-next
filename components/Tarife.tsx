@@ -130,7 +130,7 @@ export default function Tarife() {
 
               <div className="flex items-baseline gap-1.5 py-4 border-t border-b border-[var(--cream-dark)] mb-5">
                 <span
-                  className="text-4xl font-bold text-[var(--gold)] leading-none"
+                  className="text-4xl font-bold text-[var(--gold)] leading-none whitespace-nowrap"
                   style={{ fontFamily: "var(--font-playfair)" }}
                 >
                   {t.erstattung}
@@ -142,7 +142,7 @@ export default function Tarife() {
                 {t.features.map((f) => (
                   <li key={f} className="flex items-start gap-2.5 text-sm text-[var(--foreground)]">
                     <Check size={15} className="text-[var(--success)] mt-0.5 shrink-0" />
-                    {f}
+                    {f.replace(/ €/g, ' €')}
                   </li>
                 ))}
               </ul>
@@ -206,7 +206,7 @@ export default function Tarife() {
 
               <div className="flex items-baseline gap-1.5 py-4 border-t border-b border-[var(--cream-dark)] mb-5">
                 <span
-                  className="text-xl font-bold text-[var(--gold)] leading-none"
+                  className="text-xl font-bold text-[var(--gold)] leading-none whitespace-nowrap"
                   style={{ fontFamily: "var(--font-playfair)" }}
                 >
                   {t.limit}
@@ -218,7 +218,7 @@ export default function Tarife() {
                 {t.features.map((f) => (
                   <li key={f} className="flex items-start gap-2.5 text-sm text-[var(--foreground)]">
                     <Check size={15} className="text-[var(--success)] mt-0.5 shrink-0" />
-                    {f}
+                    {f.replace(/ €/g, ' €')}
                   </li>
                 ))}
               </ul>

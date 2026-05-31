@@ -108,7 +108,7 @@ function Cell({ value }: { value: CellValue }) {
     );
   }
   return (
-    <span className="text-xs text-center text-[var(--foreground)] leading-snug block">
+    <span className="text-xs text-center text-[var(--foreground)] leading-snug block whitespace-nowrap">
       {value}
     </span>
   );
@@ -198,7 +198,7 @@ export default function TarifePage() {
                 <div className="mt-auto pt-4">
                   <div className="flex items-center gap-2 text-xs text-gray-500 border-t border-[var(--cream-dark)] pt-3 mb-3">
                     <span className="font-semibold text-[var(--navy)]">Höchstgrenze:</span>
-                    <span className="text-[var(--gold)] font-bold">{t.limit}</span>
+                    <span className="text-[var(--gold)] font-bold whitespace-nowrap">{t.limit}</span>
                   </div>
                   <Link
                     href="/#kontakt"
@@ -380,7 +380,7 @@ export default function TarifePage() {
                 <div className="mt-auto pt-4">
                   <div className="flex items-center gap-2 text-xs text-gray-500 border-t border-[var(--cream-dark)] pt-3 mb-3">
                     <span className="font-semibold text-[var(--navy)]">Höchstgrenze:</span>
-                    <span className="text-[var(--gold)] font-bold">{t.limit}</span>
+                    <span className="text-[var(--gold)] font-bold whitespace-nowrap">{t.limit}</span>
                   </div>
                   <Link
                     href="/#kontakt"
