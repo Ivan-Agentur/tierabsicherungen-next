@@ -11,8 +11,8 @@ export default function Home() {
       <Header />
       <Hero />
       <Tarife />
-      <FAQ />
       <BeraterSection />
+      <FAQ />
       <Footer />
     </>
   );

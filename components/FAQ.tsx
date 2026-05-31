@@ -14,11 +14,11 @@ const faqs = [
   },
   {
     q: "Wie schnell werde ich im Schadensfall erstattet?",
-    a: "Die Abwicklung läuft digital: Sie reichen Ihre Tierarztrechnung über das persönliche Online-Kundenportal MeineARAG.de ein. Dort können Sie auch Ihre Vertragsdaten einsehen und Änderungen vornehmen. Die Erstattung erfolgt nach Prüfung direkt auf Ihr Konto.",
+    a: "Die Abwicklung läuft digital: Sie reichen Ihre Tierarztrechnung über das persönliche Online-Kundenportal des Versicherers ein. Dort können Sie auch Ihre Vertragsdaten einsehen und Änderungen vornehmen. Die Erstattung erfolgt nach Prüfung direkt auf Ihr Konto.",
   },
   {
     q: "Kann ich meinen Tarif später upgraden?",
-    a: "Die Versicherung bietet drei Leistungsvarianten: Basis, Komfort und Premium. Welche Wechselmöglichkeiten bestehen, klären Sie am besten direkt mit Ihrem Berater Ivan Aziablé – er begleitet Sie bei jeder Anpassung, damit kein Schutz verloren geht.",
+    a: "Ja, ein Upgrade auf einen höheren Tarif ist jederzeit möglich. Die Versicherung bietet drei Leistungsvarianten: Einstieg, Komfort und Premium. Ihr Berater Ivan Aziablé begleitet Sie bei der Anpassung, damit kein Schutz verloren geht.",
   },
   {
     q: "Was ist mit Vorerkrankungen meines Hundes?",
@@ -26,7 +26,7 @@ const faqs = [
   },
   {
     q: "Wie kann ich meinen Vertrag kündigen?",
-    a: "Ihre Vertragsverwaltung – einschließlich Änderungen Ihrer Daten – läuft über das persönliche Online-Kundenportal MeineARAG.de. Für eine Kündigung wenden Sie sich direkt an Ihren Berater Ivan Aziablé unter info@tierabsicherungen.de.",
+    a: "Ihre Vertragsverwaltung – einschließlich Änderungen Ihrer Daten – läuft über das persönliche Online-Kundenportal des Versicherers. Für eine Kündigung wenden Sie sich direkt an Ihren Berater Ivan Aziablé unter info@tierabsicherungen.de.",
   },
 ];
 
