@@ -138,8 +138,8 @@ export default function TarifePage() {
               <em className="text-[var(--gold)]">Klare</em> Leistungen.
             </h1>
             <p className="text-white/70 text-base max-w-xl mx-auto">
-              Wählen Sie den Schutz, der zu Ihrem Tier und Ihrem Budget passt –
-              von solider Basisabsicherung bis zum umfassenden Premiumschutz.
+              Wählen Sie den Schutz, der zu den Bedürfnissen Ihres Haustieres passt –
+              von solider Einstiegsabsicherung bis zum umfassenden Premiumschutz.
             </p>
           </div>
         </section>
