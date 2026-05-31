@@ -11,7 +11,6 @@ type ContactData = {
   alter: string;
   rasse: string;
   wannAnrufen: string;
-  fragen: string;
   datenschutz: boolean;
 };
 
@@ -22,7 +21,6 @@ export async function submitContact(data: ContactData) {
     data.rasse ? `Rasse: ${data.rasse}` : null,
     `Gechipt: ${data.gechipt}`,
     `Wann anrufen: ${data.wannAnrufen}`,
-    data.fragen ? `\nFragen: ${data.fragen}` : null,
   ].filter(Boolean).join("\n");
 
   try {

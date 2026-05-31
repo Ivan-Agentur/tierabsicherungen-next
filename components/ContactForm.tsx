@@ -15,14 +15,13 @@ type FormData = {
   alter: string;
   rasse: string;
   wannAnrufen: string;
-  fragen: string;
   datenschutz: boolean;
 };
 
 const initial: FormData = {
   vorname: "", nachname: "", email: "", telefon: "",
   haustiername: "", tierart: "", gechipt: "", alter: "", rasse: "",
-  wannAnrufen: "", fragen: "", datenschutz: false,
+  wannAnrufen: "", datenschutz: false,
 };
 
 export default function ContactForm() {
@@ -233,21 +232,6 @@ export default function ContactForm() {
             ))}
           </div>
           {errors.wannAnrufen && <p className="text-red-500 text-xs mt-1">Bitte wählen Sie eine Zeit.</p>}
-        </div>
-
-        {/* Fragen */}
-        <div className="flex flex-col gap-1">
-          <label className="text-xs font-semibold uppercase tracking-wide text-[var(--navy)]">
-            Ihre Fragen{" "}
-            <span className="text-gray-400 normal-case font-normal tracking-normal">(optional)</span>
-          </label>
-          <textarea
-            rows={3}
-            value={data.fragen}
-            onChange={(e) => setData((p) => ({ ...p, fragen: e.target.value }))}
-            placeholder="Was möchten Sie gerne wissen?"
-            className="px-3.5 py-2.5 border border-[var(--border-col)] rounded-xl text-sm outline-none resize-y focus:border-[var(--navy)] focus:ring-2 focus:ring-[var(--navy)]/10 transition-all"
-          />
         </div>
 
         {/* Datenschutz */}
