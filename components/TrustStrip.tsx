@@ -1,4 +1,4 @@
-import { ShieldCheck, Eye, RefreshCw } from "lucide-react";
+import { ShieldCheck, ThumbsUp, RefreshCw } from "lucide-react";
 
 const items = [
   {
@@ -7,7 +7,7 @@ const items = [
     text: "Ihr Hund oder Ihre Katze bleibt versichert – auch im hohen Alter. Keine versteckten Altersgrenzen, die Sie im Stich lassen.",
   },
   {
-    icon: Eye,
+    icon: ThumbsUp,
     title: "Volle Transparenz",
     text: "Klare Bedingungen ohne Kleingedrucktes. Was wir versprechen, halten wir – ohne Wenn und Aber.",
   },
