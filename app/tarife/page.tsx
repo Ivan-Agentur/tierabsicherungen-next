@@ -497,7 +497,7 @@ export default function TarifePage() {
               Noch unsicher, welcher Tarif passt?
             </h2>
             <p className="text-white/65 mb-8">
-              Ivan Aziablé berät Sie persönlich und kostenlos – damit Ihr Tier
+              Ivan Aziablé berät Sie persönlich und kostenlos – damit Ihr Haustier
               genau den Schutz bekommt, den es verdient.
             </p>
             <Link

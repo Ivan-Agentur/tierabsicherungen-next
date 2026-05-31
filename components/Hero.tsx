@@ -41,7 +41,7 @@ export default function Hero() {
               {[
                 "Kostenlose & unverbindliche Beratung",
                 "Schnelle Abwicklung",
-                "Für eine ausgewählte Leistung ist Ihr Tier auch rückwirkend geschützt",
+                "Für eine ausgewählte Leistung ist Ihr Haustier auch rückwirkend geschützt",
                 "IHK-registrierter Makler",
               ].map((txt) => (
                 <div key={txt} className="flex items-center gap-2.5 text-sm font-medium text-[var(--foreground)]">

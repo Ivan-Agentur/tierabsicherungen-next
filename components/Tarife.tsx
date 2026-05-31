@@ -98,7 +98,7 @@ export default function Tarife() {
             <em className="text-[var(--gold)]">Sehr gute</em> Leistungen.
           </h2>
           <p className="text-gray-500 mt-3">
-            Wählen Sie den Schutz, der zu Ihrem Tier passt – und zu Ihrem Budget.
+            Wählen Sie den Schutz, der zu Ihrem Haustier passt – und zu Ihrem Budget.
           </p>
         </div>
 

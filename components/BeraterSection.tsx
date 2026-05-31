@@ -27,7 +27,7 @@ export default function BeraterSection() {
               IHK-registrierter Versicherungsmakler · Reg.-Nr. D-JA31-D7W20-08
             </p>
             <p className="text-sm text-gray-500 leading-relaxed mb-6 max-w-lg">
-              Ich begleite Sie und Ihr Tier persönlich – von der Tarifwahl bis zur
+              Ich begleite Sie und Ihr Haustier persönlich – von der Tarifwahl bis zur
               Schadensabwicklung. Sprechen Sie mich an, ich nehme mir Zeit für Sie.
             </p>
             <div className="flex flex-wrap gap-3 justify-center md:justify-start">

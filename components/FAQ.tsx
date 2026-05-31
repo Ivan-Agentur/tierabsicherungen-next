@@ -10,7 +10,7 @@ const faqs = [
   },
   {
     q: "Gibt es ein Mindestalter oder ein Höchstalter für meinen Hund?",
-    a: "Konkrete Altersgrenzen werden individuell bei Vertragsabschluss geprüft. Grundsätzlich können Hunde und Katzen versichert werden – sprechen Sie Ivan Aziablé direkt an, um zu klären, welcher Tarif für Ihr Tier in Frage kommt.",
+    a: "Konkrete Altersgrenzen werden individuell bei Vertragsabschluss geprüft. Grundsätzlich können Hunde und Katzen versichert werden – sprechen Sie Ivan Aziablé direkt an, um zu klären, welcher Tarif für Ihr Haustier in Frage kommt.",
   },
   {
     q: "Wie schnell werde ich im Schadensfall erstattet?",
