@@ -32,8 +32,8 @@ export default function ContactForm() {
   const [errors, setErrors] = useState<Partial<Record<keyof FormData, boolean>>>({});
 
   const required: (keyof FormData)[] = [
-    "vorname", "nachname", "email", "telefon", "haustiername",
-    "tierart", "gechipt", "alter", "wannAnrufen", "datenschutz",
+    "vorname", "nachname", "email", "telefon",
+    "tierart", "gechipt", "alter", "datenschutz",
   ];
 
   function validate() {
@@ -145,7 +145,7 @@ export default function ContactForm() {
         </div>
 
         <div className="grid grid-cols-1 gap-4">
-          {field("haustiername", "Name des Haustieres", "text", "z. B. Bello")}
+          {field("haustiername", "Name des Haustieres", "text", "z. B. Bello", true)}
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -207,7 +207,8 @@ export default function ContactForm() {
         {/* Wann anrufen */}
         <div className="flex flex-col gap-1">
           <label className="text-xs font-semibold uppercase tracking-wide text-[var(--navy)]">
-            Wann sollen wir Sie anrufen? <span className="text-[var(--gold)]">*</span>
+            Wann sollen wir Sie anrufen?{" "}
+            <span className="text-gray-400 normal-case font-normal tracking-normal">(optional)</span>
           </label>
           <div className="flex flex-wrap items-center gap-x-6 gap-y-2 pt-1">
             {[
@@ -231,7 +232,6 @@ export default function ContactForm() {
               </label>
             ))}
           </div>
-          {errors.wannAnrufen && <p className="text-red-500 text-xs mt-1">Bitte wählen Sie eine Zeit.</p>}
         </div>
 
         {/* Datenschutz */}
