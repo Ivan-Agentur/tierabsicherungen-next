@@ -5,28 +5,28 @@ import { ChevronDown } from "lucide-react";
 
 const faqs = [
   {
-    q: "Ab wann gilt der Versicherungsschutz?",
-    a: "Der Schutz beginnt in der Regel direkt nach Vertragsabschluss. Bei Krankheiten gilt meist eine kurze Wartezeit von 14 Tagen, bei Operationen oft sofortiger Schutz. Ihr Berater klärt das genau für Ihren gewählten Tarif.",
+    q: "Welche Behandlungen sind durch die Versicherung abgedeckt?",
+    a: "Je nach gewähltem Tarif sind ambulante und stationäre Behandlungen, Operationen (einschließlich minimalinvasiver Eingriffe), Chemo- und Strahlentherapie, Voruntersuchungen sowie Nachsorge versichert. Hinzu kommen Diagnostikmaßnahmen wie Röntgen und Blutbild, Schutzimpfungen und Wurmkuren (VorsorgePlus), Medikamente und Verbandmittel sowie die Online-Sprechstunde beim Tierarzt. Ab der Komfortvariante sind zusätzlich spezielle Diagnostik (MRT, CT), Physiotherapie nach einer OP und alternative Heilmethoden wie Akupunktur oder Homöopathie mitversichert. Die Premiumvariante umfasst darüber hinaus Trächtigkeitsuntersuchungen, Geburtshilfe, Tiertransport nach Unfall sowie Schutz für weitere Haustiere (HaustierPlus).",
   },
   {
-    q: "Welche Tierarten sind versicherbar?",
-    a: "Wir versichern Hunde und Katzen – unabhängig von Rasse, Größe oder Alter. Bei der Beratung klären wir, welcher Tarif für Ihr Tier optimal ist.",
+    q: "Gibt es ein Mindestalter oder ein Höchstalter für meinen Hund?",
+    a: "Konkrete Altersgrenzen werden individuell bei Vertragsabschluss geprüft. Grundsätzlich können Hunde und Katzen versichert werden – sprechen Sie Ivan Aziablé direkt an, um zu klären, welcher Tarif für Ihr Tier in Frage kommt.",
   },
   {
-    q: "Was ist, wenn mein Tier bereits erkrankt ist?",
-    a: "Vorerkrankungen werden beim Antrag angegeben. Je nach Tarif und Erkrankung können Ausschlüsse gelten oder ein individuelles Angebot erstellt werden. Sprechen Sie uns einfach an – wir finden eine Lösung.",
+    q: "Wie schnell werde ich im Schadensfall erstattet?",
+    a: "Die Abwicklung läuft digital: Sie reichen Ihre Tierarztrechnung über das persönliche Online-Kundenportal MeineARAG.de ein. Dort können Sie auch Ihre Vertragsdaten einsehen und Änderungen vornehmen. Die Erstattung erfolgt nach Prüfung direkt auf Ihr Konto.",
   },
   {
-    q: "Wie läuft die Schadensabwicklung ab?",
-    a: "Sie reichen die Tierarztrechnung einfach digital ein – per E-Mail oder über das Kundenportal. Die Erstattung erfolgt in der Regel innerhalb weniger Werktage direkt auf Ihr Konto.",
+    q: "Kann ich meinen Tarif später upgraden?",
+    a: "Die Versicherung bietet drei Leistungsvarianten: Basis, Komfort und Premium. Welche Wechselmöglichkeiten bestehen, klären Sie am besten direkt mit Ihrem Berater Ivan Aziablé – er begleitet Sie bei jeder Anpassung, damit kein Schutz verloren geht.",
   },
   {
-    q: "Kann ich den Tarif später wechseln?",
-    a: "Ja, ein Upgrade auf einen höheren Tarif ist jederzeit möglich. Ihr Berater begleitet Sie bei der Anpassung, damit kein Schutz verloren geht.",
+    q: "Was ist mit Vorerkrankungen meines Hundes?",
+    a: "Ab der Komfortvariante greift eine Rückwärtsdeckung: Ausgewählte Leistungen aus VorsorgePlus – wie Schutzimpfungen, Zahnsteinentfernung und Kastration – sind bis zu drei Monate vor Vertragsbeginn mitversichert. In der Premiumvariante gilt dies sogar für einen Krankheitsfall, der bis zu drei Monate vor Vertragsbeginn eingetreten ist (bis zur maximalen Versicherungssumme, auch bei mehreren Rechnungen). Bei allen Tarifen gilt eine Wartezeit von einem Monat bei Krankheit.",
   },
   {
-    q: "Gibt es eine Selbstbeteiligung?",
-    a: "Das hängt vom gewählten Tarif ab. Beim Premiumschutz übernehmen wir 100 % der erstattungsfähigen Kosten ohne Selbstbeteiligung. Bei günstigeren Tarifen kann eine geringe Eigenbeteiligung anfallen.",
+    q: "Wie kann ich meinen Vertrag kündigen?",
+    a: "Ihre Vertragsverwaltung – einschließlich Änderungen Ihrer Daten – läuft über das persönliche Online-Kundenportal MeineARAG.de. Für eine Kündigung wenden Sie sich direkt an Ihren Berater Ivan Aziablé unter info@tierabsicherungen.de.",
   },
 ];
 
