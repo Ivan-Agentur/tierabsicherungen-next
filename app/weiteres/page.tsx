@@ -106,13 +106,13 @@ export default function WeiteresPage() {
           <div className="max-w-5xl mx-auto flex gap-1">
             <Link
               href="/tarife"
-              className="px-6 py-3 text-sm font-semibold border-b-2 border-transparent text-white/60 hover:text-white transition-colors"
+              className="px-6 py-3 text-sm font-semibold text-white/60 hover:text-white transition-colors"
             >
               Tarife
             </Link>
             <Link
               href="/weiteres"
-              className="px-6 py-3 text-sm font-semibold border-b-2 border-[var(--gold)] text-white"
+              className="px-6 py-3 text-sm font-semibold rounded-t-lg bg-white/20 text-white"
             >
               Weiteres
             </Link>
