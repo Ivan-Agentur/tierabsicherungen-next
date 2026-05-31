@@ -4,7 +4,7 @@ const items = [
   {
     icon: ShieldCheck,
     title: "Kein Altersausschluss",
-    text: "Ihr Hund bleibt versichert – auch im hohen Alter. Keine versteckten Altersgrenzen, die Sie im Stich lassen.",
+    text: "Ihr Hund oder Ihre Katze bleibt versichert – auch im hohen Alter. Keine versteckten Altersgrenzen, die Sie im Stich lassen.",
   },
   {
     icon: Eye,
@@ -14,7 +14,7 @@ const items = [
   {
     icon: RefreshCw,
     title: "Lebenslange Verlängerung",
-    text: "Einmal abgesichert, immer abgesichert. Wir kündigen nicht, nur weil Ihr Hund häufiger krank wird.",
+    text: "Einmal abgesichert, immer abgesichert. Wir kündigen nicht, nur weil Ihr Hund oder Ihre Katze häufiger krank wird.",
   },
 ];
 
@@ -33,7 +33,7 @@ export default function TrustStrip() {
             >
               {title}
             </h3>
-            <p className="text-white/55 text-sm leading-relaxed">{text}</p>
+            <p className="text-white text-sm leading-relaxed">{text}</p>
           </div>
         ))}
       </div>
