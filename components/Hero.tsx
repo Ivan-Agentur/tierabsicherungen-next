@@ -50,6 +50,24 @@ export default function Hero() {
                 </div>
               ))}
             </div>
+
+            {/* Hundefotos */}
+            <div className="grid grid-cols-2 gap-2">
+              {[
+                "https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=600&h=600&fit=crop&q=80",
+                "https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=600&h=600&fit=crop&q=80",
+                "https://images.unsplash.com/photo-1518717758536-85ae29035b6d?w=600&h=600&fit=crop&q=80",
+                "https://images.unsplash.com/photo-1583511655826-05700d52f4d9?w=600&h=600&fit=crop&q=80",
+              ].map((src, i) => (
+                <div key={i} className="rounded-2xl overflow-hidden aspect-square">
+                  <img
+                    src={src}
+                    alt="Hund"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>
