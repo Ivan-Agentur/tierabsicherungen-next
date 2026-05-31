@@ -7,6 +7,7 @@ import { Menu, X } from "lucide-react";
 const navLinks = [
   { label: "Startseite", href: "/" },
   { label: "Tarife", href: "/tarife" },
+  { label: "Weiteres", href: "/weiteres" },
 ];
 
 const navBtnClass = "px-4 py-2 rounded-lg text-sm font-semibold bg-[var(--gold)] text-white";
