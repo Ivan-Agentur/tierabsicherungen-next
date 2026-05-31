@@ -132,12 +132,12 @@ export default function Tarife() {
 
               <div className="flex items-baseline gap-1.5 py-4 border-t border-b border-[var(--cream-dark)] mb-5">
                 <span
-                  className="text-2xl font-bold text-[var(--gold)] leading-none whitespace-nowrap"
+                  className="text-xl font-bold text-[var(--gold)] leading-none whitespace-nowrap"
                   style={{ fontFamily: "var(--font-playfair)" }}
                 >
                   {t.limit}
                 </span>
-                <span className="text-xs text-gray-400 font-medium">Leistungshöchstgrenze</span>
+                <span className="text-xs text-gray-400 font-medium">Höchstgrenze</span>
               </div>
 
               <ul className="space-y-2.5 mb-7">
