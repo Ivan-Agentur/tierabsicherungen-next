@@ -57,17 +57,17 @@ export default function Impressum() {
 
             <Section title="Zuständige Aufsichtsbehörde">
               <p>
-                <strong>Industrie- und Handelskammer Bonn/Rhein-Sieg</strong><br />
-                Bonner Talweg 17<br />
-                53113 Bonn<br />
-                Telefon: +49 228 2284-0<br />
+                <strong>Handelskammer Hamburg</strong><br />
+                Adolphsplatz 1<br />
+                20457 Hamburg<br />
+                Telefon: +49 40 36138-0<br />
                 <a
-                  href="https://www.ihk.de/bonn"
+                  href="https://www.hk24.de"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-[var(--gold)] hover:underline"
                 >
-                  www.ihk.de/bonn
+                  www.hk24.de
                 </a>
               </p>
               <p className="mt-4">
