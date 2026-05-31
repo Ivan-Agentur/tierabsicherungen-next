@@ -145,24 +145,6 @@ export default function TarifePage() {
           </div>
         </section>
 
-        {/* Tab Navigation */}
-        <div className="bg-[var(--navy)] border-t border-white/10 px-6">
-          <div className="max-w-5xl mx-auto flex gap-1">
-            <Link
-              href="/tarife"
-              className="px-6 py-3 text-sm font-semibold rounded-t-lg bg-white/20 text-white"
-            >
-              Tarife
-            </Link>
-            <Link
-              href="/weiteres"
-              className="px-6 py-3 text-sm font-semibold text-white/60 hover:text-white transition-colors"
-            >
-              Weiteres
-            </Link>
-          </div>
-        </div>
-
         {/* Tariff Cards Summary */}
         <section className="py-10 px-6 bg-white border-b border-[var(--border-col)]">
           <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-5 items-stretch">
