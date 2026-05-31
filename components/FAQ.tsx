@@ -28,6 +28,10 @@ const faqs = [
     q: "Wie kann ich meinen Vertrag kündigen?",
     a: "Ihre Vertragsverwaltung – einschließlich Änderungen Ihrer Daten – läuft über das persönliche Online-Kundenportal des Versicherers. Für eine Kündigung wenden Sie sich direkt an Ihren Berater Ivan Aziablé unter info@tierabsicherungen.de.",
   },
+  {
+    q: "Was ist ein GOT-Satz?",
+    a: "GOT steht für Gebührenordnung für Tierärzte – das ist die offizielle Preisliste, nach der Tierärzte in Deutschland abrechnen dürfen. Jede Leistung hat dort einen festgelegten Grundpreis. Je nach Aufwand, Schwierigkeitsgrad und Zeit kann der Tierarzt diesen Grundpreis mit einem bestimmten Faktor multiplizieren – zum Beispiel dem 2-fachen oder 4-fachen Satz. Unsere Tarife erstatten bis zum 4-fachen GOT-Satz inklusive Notdienstgebühr. Das bedeutet: Auch wenn Ihr Tierarzt den höchsten zulässigen Satz berechnet, sind Sie vollständig abgesichert.",
+  },
 ];
 
 export default function FAQ() {
