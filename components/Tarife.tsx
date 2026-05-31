@@ -5,7 +5,7 @@ const tarife = [
   {
     name: "Premiumschutz",
     tagline: "Im Ernstfall das Beste für Ihre Liebsten.",
-    erstattung: "100 %",
+    limit: "Unbegrenzt",
     features: [
       "Auch bei längerer Genesung abgesichert",
       "Bereits entstandene Kosten können berücksichtigt werden",
@@ -17,7 +17,7 @@ const tarife = [
   {
     name: "Komfortschutz",
     tagline: "Viel Schutz – bei planbaren Kosten.",
-    erstattung: "90 %",
+    limit: "Unbegrenzt",
     features: [
       "Starker Schutz bei OP & Behandlung",
       "Unterstützung auch nach Operationen",
@@ -29,7 +29,7 @@ const tarife = [
   {
     name: "Einstiegsschutz",
     tagline: "Für den ersten Schritt zur Absicherung Ihres Haustieres.",
-    erstattung: "80 %",
+    limit: "10.000 € / Jahr",
     features: [
       "Schutz bei wichtigen Operationen",
       "Hilfe bei unerwarteten Tierarztkosten",
@@ -132,12 +132,12 @@ export default function Tarife() {
 
               <div className="flex items-baseline gap-1.5 py-4 border-t border-b border-[var(--cream-dark)] mb-5">
                 <span
-                  className="text-4xl font-bold text-[var(--gold)] leading-none whitespace-nowrap"
+                  className="text-2xl font-bold text-[var(--gold)] leading-none whitespace-nowrap"
                   style={{ fontFamily: "var(--font-playfair)" }}
                 >
-                  {t.erstattung}
+                  {t.limit}
                 </span>
-                <span className="text-xs text-gray-400 font-medium">Erstattung</span>
+                <span className="text-xs text-gray-400 font-medium">Leistungshöchstgrenze</span>
               </div>
 
               <ul className="space-y-2.5 mb-7">
