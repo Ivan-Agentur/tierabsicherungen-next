@@ -17,9 +17,9 @@ export default function Footer() {
           © 2026 tierabsicherungen.de · Ivan Aziablé · IHK-Reg.-Nr. D-JA31-D7W20-08
         </p>
         <div className="flex gap-5">
-          <a href="#" className="text-xs transition-colors hover:text-[var(--gold-light)]" style={{ color: '#ffffff' }}>
+          <Link href="/impressum" className="text-xs transition-colors hover:text-[var(--gold-light)]" style={{ color: '#ffffff' }}>
             Impressum
-          </a>
+          </Link>
           <Link href="/datenschutz" className="text-xs transition-colors hover:text-[var(--gold-light)]" style={{ color: '#ffffff' }}>
             Datenschutz
           </Link>
