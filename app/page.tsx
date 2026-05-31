@@ -1,7 +1,6 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import Tarife from "@/components/Tarife";
-import BeraterSection from "@/components/BeraterSection";
 import Footer from "@/components/Footer";
 
 export default function Home() {
@@ -10,7 +9,6 @@ export default function Home() {
       <Header />
       <Hero />
       <Tarife />
-      <BeraterSection />
       <Footer />
     </>
   );
