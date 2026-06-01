@@ -57,17 +57,17 @@ export default function Impressum() {
 
             <Section title="Zuständige Aufsichtsbehörde">
               <p>
-                <strong>Handelskammer Hamburg</strong><br />
-                Adolphsplatz 1<br />
-                20457 Hamburg<br />
-                Telefon: +49 40 36138-0<br />
+                <strong>DIHK Deutsche Industrie- und Handelskammer</strong><br />
+                Breite Straße 29<br />
+                10178 Berlin<br />
+                Telefon: +49 1806 005850 (20 Cent/Anruf aus dem deutschen Festnetz; höchstens 60 Cent/Anruf aus Mobilfunknetzen)<br />
                 <a
-                  href="https://www.hk24.de"
+                  href="https://www.dihk.de"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-[var(--gold)] hover:underline"
                 >
-                  www.hk24.de
+                  www.dihk.de
                 </a>
               </p>
               <p className="mt-4">
