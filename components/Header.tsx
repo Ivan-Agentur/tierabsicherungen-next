@@ -38,8 +38,8 @@ export default function Header() {
             className="px-3 py-2 rounded-lg text-sm font-semibold bg-[var(--gold)] text-white flex items-center gap-1.5"
             title="Häufige Fragen"
           >
-            <HelpCircle size={15} />
             FAQ
+            <HelpCircle size={15} />
           </Link>
         </nav>
 
@@ -66,8 +66,8 @@ export default function Header() {
             onClick={() => setOpen(false)}
             className={`${navBtnMobileClass} flex items-center justify-center gap-2`}
           >
-            <HelpCircle size={15} />
             FAQ
+            <HelpCircle size={15} />
           </Link>
         </div>
       )}
