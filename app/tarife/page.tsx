@@ -145,75 +145,6 @@ export default function TarifePage() {
           </div>
         </section>
 
-        {/* Tariff Cards Summary */}
-        <section className="py-10 px-6 bg-white border-b border-[var(--border-col)]">
-          <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-5 items-stretch">
-            {[
-              {
-                name: "Premiumschutz",
-                subtitle: "Ihr Schutz für höchste Ansprüche",
-                tagline: "Alles inklusive – das Beste für Ihren Liebling.",
-                limit: "Unbegrenzt",
-                recommended: true,
-                color: "border-[var(--gold)] border-2",
-              },
-              {
-                name: "Komfortschutz",
-                subtitle: "Ihr Plus an Sicherheit",
-                tagline: "Starker Schutz – mit unbegrenzter Deckung.",
-                limit: "Unbegrenzt",
-                recommended: false,
-                color: "border-[var(--navy)]",
-              },
-              {
-                name: "Einstiegsschutz",
-                subtitle: "Ihr verlässlicher Grundschutz",
-                tagline: "Solide Absicherung für den ersten Schritt.",
-                limit: "10.000 € / Jahr",
-                recommended: false,
-                color: "border-[var(--border-col)]",
-              },
-            ].map((t) => (
-              <div
-                key={t.name}
-                className={`relative flex flex-col h-full rounded-2xl p-6 border bg-white ${t.color} ${
-                  t.recommended
-                    ? "shadow-[0_4px_24px_rgba(200,118,42,.15)]"
-                    : ""
-                }`}
-              >
-                {t.recommended && (
-                  <span className="absolute -top-3 right-4 bg-[var(--gold)] text-white text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full">
-                    Empfohlen
-                  </span>
-                )}
-                <h2
-                  className="text-xl text-[var(--navy)] mb-0.5"
-                  style={{ fontFamily: "var(--font-playfair)" }}
-                >
-                  {t.name}
-                </h2>
-                <p className="text-xs text-gray-400 italic mb-3">{t.subtitle}</p>
-                <p className="text-sm text-gray-600">{t.tagline}</p>
-
-                <div className="mt-auto pt-4">
-                  <div className="flex items-center gap-2 text-xs text-gray-500 border-t border-[var(--cream-dark)] pt-3 mb-3">
-                    <span className="font-semibold text-[var(--navy)]">Höchstgrenze:</span>
-                    <span className="text-[var(--gold)] font-bold whitespace-nowrap">{t.limit}</span>
-                  </div>
-                  <Link
-                    href="/#kontakt"
-                    className="flex items-center justify-center gap-2 w-full py-3 rounded-xl font-semibold text-sm border-2 border-[var(--navy)] text-[var(--navy)]"
-                  >
-                    Jetzt anfragen
-                    <ArrowRight size={15} />
-                  </Link>
-                </div>
-              </div>
-            ))}
-          </div>
-        </section>
-
         {/* Full comparison table */}
         <section className="py-14 px-6">
           <div className="max-w-5xl mx-auto">
@@ -306,54 +237,31 @@ export default function TarifePage() {
           </div>
         </section>
 
-        <TrustStrip />
-
-        {/* OP Tariff Intro */}
-        <section className="py-14 px-6 bg-[var(--cream)] border-t-4 border-[var(--gold)]">
-          <div className="max-w-3xl mx-auto text-center">
-            <p className="text-[var(--gold)] text-sm font-semibold uppercase tracking-widest mb-3">
-              Speziell für Operationen
-            </p>
-            <h2
-              className="text-3xl md:text-4xl text-[var(--navy)] mb-4"
-              style={{ fontFamily: "var(--font-playfair)" }}
-            >
-              Wenn es auf den Eingriff{" "}
-              <em className="text-[var(--gold)]">ankommt.</em>
-            </h2>
-            <p className="text-gray-500 text-base max-w-2xl mx-auto">
-              Ob Kreuzbandriss oder Tumorentfernung – Operationen können teuer werden.
-              Hier sehen Sie auf einen Blick, welche Eingriffe und Zusatzleistungen
-              die OP-Tarife absichern.
-            </p>
-          </div>
-        </section>
-
-        {/* OP Tariff Cards */}
+        {/* Tariff Cards Summary */}
         <section className="py-10 px-6 bg-white border-b border-[var(--border-col)]">
           <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-5 items-stretch">
             {[
               {
-                name: "Premium-OP",
+                name: "Premiumschutz",
                 subtitle: "Ihr Schutz für höchste Ansprüche",
-                tagline: "Unbegrenzte Deckung – inkl. VorsorgePlus und Treue-Bonus.",
+                tagline: "Alles inklusive – das Beste für Ihren Liebling.",
                 limit: "Unbegrenzt",
                 recommended: true,
                 color: "border-[var(--gold)] border-2",
               },
               {
-                name: "Komfort-OP",
+                name: "Komfortschutz",
                 subtitle: "Ihr Plus an Sicherheit",
-                tagline: "Starke OP-Absicherung mit großzügiger Nachsorge.",
-                limit: "10.000 € / Jahr",
+                tagline: "Starker Schutz – mit unbegrenzter Deckung.",
+                limit: "Unbegrenzt",
                 recommended: false,
                 color: "border-[var(--navy)]",
               },
               {
-                name: "Einstieg-OP",
+                name: "Einstiegsschutz",
                 subtitle: "Ihr verlässlicher Grundschutz",
-                tagline: "Solide Absicherung bei Operationen – zum günstigen Einstieg.",
-                limit: "8.000 € / Jahr",
+                tagline: "Solide Absicherung für den ersten Schritt.",
+                limit: "10.000 € / Jahr",
                 recommended: false,
                 color: "border-[var(--border-col)]",
               },
@@ -395,6 +303,29 @@ export default function TarifePage() {
                 </div>
               </div>
             ))}
+          </div>
+        </section>
+
+        <TrustStrip />
+
+        {/* OP Tariff Intro */}
+        <section className="py-14 px-6 bg-[var(--cream)] border-t-4 border-[var(--gold)]">
+          <div className="max-w-3xl mx-auto text-center">
+            <p className="text-[var(--gold)] text-sm font-semibold uppercase tracking-widest mb-3">
+              Speziell für Operationen
+            </p>
+            <h2
+              className="text-3xl md:text-4xl text-[var(--navy)] mb-4"
+              style={{ fontFamily: "var(--font-playfair)" }}
+            >
+              Wenn es auf den Eingriff{" "}
+              <em className="text-[var(--gold)]">ankommt.</em>
+            </h2>
+            <p className="text-gray-500 text-base max-w-2xl mx-auto">
+              Ob Kreuzbandriss oder Tumorentfernung – Operationen können teuer werden.
+              Hier sehen Sie auf einen Blick, welche Eingriffe und Zusatzleistungen
+              die OP-Tarife absichern.
+            </p>
           </div>
         </section>
 
@@ -487,6 +418,75 @@ export default function TarifePage() {
               zugrundeliegenden allgemeinen Versicherungsbedingungen. Der GOT-Satz richtet sich nach der
               Gebührenordnung für Tierärzte.
             </p>
+          </div>
+        </section>
+
+        {/* OP Tariff Cards */}
+        <section className="py-10 px-6 bg-white border-b border-[var(--border-col)]">
+          <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-5 items-stretch">
+            {[
+              {
+                name: "Premium-OP",
+                subtitle: "Ihr Schutz für höchste Ansprüche",
+                tagline: "Unbegrenzte Deckung – inkl. VorsorgePlus und Treue-Bonus.",
+                limit: "Unbegrenzt",
+                recommended: true,
+                color: "border-[var(--gold)] border-2",
+              },
+              {
+                name: "Komfort-OP",
+                subtitle: "Ihr Plus an Sicherheit",
+                tagline: "Starke OP-Absicherung mit großzügiger Nachsorge.",
+                limit: "10.000 € / Jahr",
+                recommended: false,
+                color: "border-[var(--navy)]",
+              },
+              {
+                name: "Einstieg-OP",
+                subtitle: "Ihr verlässlicher Grundschutz",
+                tagline: "Solide Absicherung bei Operationen – zum günstigen Einstieg.",
+                limit: "8.000 € / Jahr",
+                recommended: false,
+                color: "border-[var(--border-col)]",
+              },
+            ].map((t) => (
+              <div
+                key={t.name}
+                className={`relative flex flex-col h-full rounded-2xl p-6 border bg-white ${t.color} ${
+                  t.recommended
+                    ? "shadow-[0_4px_24px_rgba(200,118,42,.15)]"
+                    : ""
+                }`}
+              >
+                {t.recommended && (
+                  <span className="absolute -top-3 right-4 bg-[var(--gold)] text-white text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full">
+                    Empfohlen
+                  </span>
+                )}
+                <h2
+                  className="text-xl text-[var(--navy)] mb-0.5"
+                  style={{ fontFamily: "var(--font-playfair)" }}
+                >
+                  {t.name}
+                </h2>
+                <p className="text-xs text-gray-400 italic mb-3">{t.subtitle}</p>
+                <p className="text-sm text-gray-600">{t.tagline}</p>
+
+                <div className="mt-auto pt-4">
+                  <div className="flex items-center gap-2 text-xs text-gray-500 border-t border-[var(--cream-dark)] pt-3 mb-3">
+                    <span className="font-semibold text-[var(--navy)]">Höchstgrenze:</span>
+                    <span className="text-[var(--gold)] font-bold whitespace-nowrap">{t.limit}</span>
+                  </div>
+                  <Link
+                    href="/#kontakt"
+                    className="flex items-center justify-center gap-2 w-full py-3 rounded-xl font-semibold text-sm border-2 border-[var(--navy)] text-[var(--navy)]"
+                  >
+                    Jetzt anfragen
+                    <ArrowRight size={15} />
+                  </Link>
+                </div>
+              </div>
+            ))}
           </div>
         </section>
 
