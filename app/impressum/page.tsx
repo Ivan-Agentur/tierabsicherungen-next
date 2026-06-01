@@ -60,7 +60,7 @@ export default function Impressum() {
                 <strong>DIHK Deutsche Industrie- und Handelskammer</strong><br />
                 Breite Straße 29<br />
                 10178 Berlin<br />
-                Telefon: +49 1806 005850 (20 Cent/Anruf aus dem deutschen Festnetz; höchstens 60 Cent/Anruf aus Mobilfunknetzen)<br />
+                <span className="whitespace-nowrap">Telefon: +49 1806 005850 (20 Cent/Anruf aus dem deutschen Festnetz; höchstens 60 Cent/Anruf aus Mobilfunknetzen)</span><br />
                 <a
                   href="https://www.dihk.de"
                   target="_blank"
