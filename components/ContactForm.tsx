@@ -103,14 +103,21 @@ export default function ContactForm() {
 
   if (submitted) {
     return (
-      <div className="bg-white rounded-2xl border border-[var(--border-col)] p-10 flex flex-col items-center text-center gap-4">
-        <CheckCircle size={48} className="text-[var(--success)]" />
-        <div>
-          <p className="font-bold text-[var(--navy)] text-lg" style={{ fontFamily: "var(--font-playfair)" }}>
+      <div className="bg-white rounded-2xl border border-[var(--border-col)] overflow-hidden flex flex-col items-center text-center">
+        <div className="w-full aspect-[3/4] relative">
+          <img
+            src="/flyer-bild.jpg"
+            alt="Glücklicher Hund mit Besitzerin auf einer Blumenwiese"
+            className="w-full h-full object-cover object-top"
+          />
+        </div>
+        <div className="px-8 py-8 flex flex-col items-center gap-3">
+          <CheckCircle size={36} className="text-[var(--success)]" />
+          <p className="font-bold text-[var(--navy)] text-xl" style={{ fontFamily: "var(--font-playfair)" }}>
             Vielen Dank!
           </p>
-          <p className="text-gray-500 text-sm mt-1">
-            Wir melden uns innerhalb von 24 Stunden bei Ihnen.
+          <p className="text-gray-500 text-sm leading-relaxed max-w-xs">
+            Ihre Anfrage ist bei uns eingegangen. Wir melden uns innerhalb von 24 Stunden bei Ihnen.
           </p>
         </div>
       </div>
