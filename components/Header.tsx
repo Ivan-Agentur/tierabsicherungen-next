@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, HelpCircle } from "lucide-react";
 
 const navLinks = [
   { label: "Startseite", href: "/" },
@@ -33,6 +33,14 @@ export default function Header() {
               {link.label}
             </Link>
           ))}
+          <Link
+            href="/#faq"
+            className="px-3 py-2 rounded-lg text-sm font-semibold bg-[var(--gold)] text-white flex items-center gap-1.5"
+            title="Häufige Fragen"
+          >
+            <HelpCircle size={15} />
+            FAQ
+          </Link>
         </nav>
 
         {/* Mobile hamburger */}
@@ -53,6 +61,14 @@ export default function Header() {
               {link.label}
             </Link>
           ))}
+          <Link
+            href="/#faq"
+            onClick={() => setOpen(false)}
+            className={`${navBtnMobileClass} flex items-center justify-center gap-2`}
+          >
+            <HelpCircle size={15} />
+            FAQ
+          </Link>
         </div>
       )}
     </header>
