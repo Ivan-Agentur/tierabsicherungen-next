@@ -24,7 +24,29 @@ export default function Hero() {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_340px] gap-8 items-start">
-          <ContactForm />
+          <div className="flex flex-col gap-4">
+            <ContactForm />
+
+            {/* Hundefotos – bündig mit dem Formular */}
+            <div className="grid grid-cols-5 gap-2">
+              {[
+                { src: "/hund1.jpg" },
+                { src: "/hund2.jpg" },
+                { src: "/hund3.jpg" },
+                { src: "/flyer-bild.jpg", position: "center 15%" },
+                { src: "/hund4.jpg" },
+              ].map(({ src, position }, i) => (
+                <div key={i} className="rounded-2xl overflow-hidden aspect-square">
+                  <img
+                    src={src}
+                    alt="Hund"
+                    className="w-full h-full object-cover"
+                    style={position ? { objectPosition: position } : undefined}
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
 
           <div className="flex flex-col gap-4">
             {/* 24h Badge */}
@@ -53,25 +75,6 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Hundefotos – volle Breite, bündig mit dem Formular */}
-        <div className="mt-4 grid grid-cols-5 gap-2">
-          {[
-            { src: "/hund1.jpg" },
-            { src: "/hund2.jpg" },
-            { src: "/hund3.jpg" },
-            { src: "/flyer-bild.jpg", position: "center 15%" },
-            { src: "/hund4.jpg" },
-          ].map(({ src, position }, i) => (
-            <div key={i} className="rounded-2xl overflow-hidden aspect-square">
-              <img
-                src={src}
-                alt="Hund"
-                className="w-full h-full object-cover"
-                style={position ? { objectPosition: position } : undefined}
-              />
-            </div>
-          ))}
-        </div>
       </div>
     </section>
   );
