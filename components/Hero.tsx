@@ -23,7 +23,7 @@ export default function Hero() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-[1fr_340px] gap-8 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-[1fr_340px] gap-8 items-stretch">
           <ContactForm />
 
           <div className="flex flex-col gap-4">
@@ -51,8 +51,11 @@ export default function Hero() {
               ))}
             </div>
 
-            {/* Hundefotos */}
-            <div className="grid grid-cols-2 gap-2">
+            {/* Hundefotos – füllen den verbleibenden Platz bis zur Formular-Unterkante */}
+            <div
+              className="flex-1 min-h-0 grid grid-cols-2 gap-2"
+              style={{ gridTemplateRows: "repeat(3, 1fr)" }}
+            >
               {[
                 { src: "/hund1.jpg" },
                 { src: "/hund2.jpg" },
@@ -60,7 +63,7 @@ export default function Hero() {
                 { src: "/flyer-bild.jpg", position: "center 15%" },
                 { src: "/hund4.jpg", span: true },
               ].map(({ src, position, span }, i) => (
-                <div key={i} className={`rounded-2xl overflow-hidden aspect-square ${span ? "col-span-2 aspect-video" : ""}`}>
+                <div key={i} className={`rounded-2xl overflow-hidden ${span ? "col-span-2" : ""}`}>
                   <img
                     src={src}
                     alt="Hund"
