@@ -31,7 +31,7 @@ export default function Impressum() {
                 Holzgasse 4–20<br />
                 53721 Siegburg<br />
                 <br />
-                E-Mail: <a href="mailto:info@tierabsicherungen.de" className="text-[var(--gold)] hover:underline">info@tierabsicherungen.de</a>
+                E-Mail: <a href="mailto:ivan.aziable@arag-partner.de" className="text-[var(--gold)] hover:underline">ivan.aziable@arag-partner.de</a>
               </address>
             </Section>
 

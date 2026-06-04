@@ -32,11 +32,11 @@ export default function BeraterSection() {
             </p>
             <div className="flex flex-wrap gap-3 justify-center md:justify-start">
               <a
-                href="mailto:info@tierabsicherungen.de"
+                href="mailto:ivan.aziable@arag-partner.de"
                 className="flex items-center gap-2 py-3.5 px-6 bg-[var(--gold)] text-white rounded-xl font-semibold text-sm hover:bg-[#b5671e] transition-all hover:-translate-y-0.5 hover:shadow-lg"
               >
                 <Mail size={16} />
-                info@tierabsicherungen.de
+                ivan.aziable@arag-partner.de
               </a>
             </div>
           </div>

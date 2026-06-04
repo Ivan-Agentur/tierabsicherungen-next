@@ -32,7 +32,7 @@ export default function Datenschutz() {
                 Holzgasse 4–20<br />
                 53721 Siegburg<br />
                 <br />
-                E-Mail: <a href="mailto:info@tierabsicherungen.de" className="text-[var(--gold)] hover:underline">info@tierabsicherungen.de</a>
+                E-Mail: <a href="mailto:ivan.aziable@arag-partner.de" className="text-[var(--gold)] hover:underline">ivan.aziable@arag-partner.de</a>
               </address>
             </Section>
 
@@ -102,8 +102,8 @@ export default function Datenschutz() {
               <p className="mt-3">
                 Sie können Ihre Einwilligung jederzeit mit Wirkung für die Zukunft
                 widerrufen. Wenden Sie sich dazu per E-Mail an{" "}
-                <a href="mailto:info@tierabsicherungen.de" className="text-[var(--gold)] hover:underline">
-                  info@tierabsicherungen.de
+                <a href="mailto:ivan.aziable@arag-partner.de" className="text-[var(--gold)] hover:underline">
+                  ivan.aziable@arag-partner.de
                 </a>.
               </p>
             </Section>
@@ -232,8 +232,8 @@ export default function Datenschutz() {
               </ul>
               <p className="mt-3">
                 Zur Ausübung Ihrer Rechte wenden Sie sich an:{" "}
-                <a href="mailto:info@tierabsicherungen.de" className="text-[var(--gold)] hover:underline">
-                  info@tierabsicherungen.de
+                <a href="mailto:ivan.aziable@arag-partner.de" className="text-[var(--gold)] hover:underline">
+                  ivan.aziable@arag-partner.de
                 </a>
               </p>
             </Section>

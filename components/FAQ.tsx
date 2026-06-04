@@ -26,7 +26,7 @@ const faqs = [
   },
   {
     q: "Wie kann ich meinen Vertrag kündigen?",
-    a: "Ihre Vertragsverwaltung – einschließlich Änderungen Ihrer Daten – läuft über das persönliche Online-Kundenportal des Versicherers. Für eine Kündigung wenden Sie sich direkt an Ihren Berater Ivan Aziablé unter info@tierabsicherungen.de.",
+    a: "Ihre Vertragsverwaltung – einschließlich Änderungen Ihrer Daten – läuft über das persönliche Online-Kundenportal des Versicherers. Für eine Kündigung wenden Sie sich direkt an Ihren Berater Ivan Aziablé unter ivan.aziable@arag-partner.de.",
   },
   {
     q: "Was ist ein GOT-Satz?",
