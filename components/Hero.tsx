@@ -57,7 +57,7 @@ export default function Hero() {
                 "/hund1.jpg",
                 "/hund2.jpg",
                 "/hund3.jpg",
-                "/hund4.jpg",
+                "/flyer-bild.jpg",
               ].map((src, i) => (
                 <div key={i} className="rounded-2xl overflow-hidden aspect-square">
                   <img
