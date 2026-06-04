@@ -54,21 +54,19 @@ export default function Hero() {
             {/* Hundefotos – füllen den verbleibenden Platz bis zur Formular-Unterkante */}
             <div
               className="flex-1 min-h-0 grid grid-cols-2 gap-2"
-              style={{ gridTemplateRows: "repeat(3, 1fr)" }}
+              style={{ gridTemplateRows: "repeat(2, 1fr)" }}
             >
               {[
                 { src: "/hund1.jpg" },
                 { src: "/hund2.jpg" },
                 { src: "/hund3.jpg" },
-                { src: "/flyer-bild.jpg", position: "center 15%" },
-                { src: "/hund4.jpg", span: true },
-              ].map(({ src, position, span }, i) => (
-                <div key={i} className={`rounded-2xl overflow-hidden ${span ? "col-span-2" : ""}`}>
+                { src: "/hund4.jpg" },
+              ].map(({ src }, i) => (
+                <div key={i} className="rounded-2xl overflow-hidden">
                   <img
                     src={src}
                     alt="Hund"
                     className="w-full h-full object-cover"
-                    style={position ? { objectPosition: position } : undefined}
                   />
                 </div>
               ))}
