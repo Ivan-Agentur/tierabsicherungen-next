@@ -38,20 +38,8 @@ export default function FAQ() {
   const [open, setOpen] = useState<number | null>(null);
 
   return (
-    <section
-      className="py-16 relative"
-      id="faq"
-      style={{
-        backgroundImage: "url('/faq-hintergrund.jpg')",
-        backgroundSize: "cover",
-        backgroundPosition: "center top",
-        backgroundAttachment: "fixed",
-      }}
-    >
-      {/* Leichter weißer Schleier */}
-      <div className="absolute inset-0 bg-white/80 backdrop-blur-[2px]" />
-
-      <div className="relative max-w-3xl mx-auto px-6">
+    <section className="py-16 bg-[var(--cream)]" id="faq">
+      <div className="max-w-3xl mx-auto px-6">
         <div className="text-center mb-10">
           <h2
             className="text-3xl md:text-4xl"
@@ -96,4 +84,3 @@ export default function FAQ() {
     </section>
   );
 }
-
