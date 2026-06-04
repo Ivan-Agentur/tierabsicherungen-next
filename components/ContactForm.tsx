@@ -131,7 +131,7 @@ export default function ContactForm() {
         className="text-xl text-[var(--navy)] mb-5 pb-4 border-b border-[var(--cream-dark)]"
         style={{ fontFamily: "var(--font-playfair)" }}
       >
-        Rückruf anfordern
+        Rückruf anfordern & berechnen lassen
       </h2>
 
       <form onSubmit={handleSubmit} className="flex flex-col gap-4" noValidate>
@@ -286,7 +286,7 @@ export default function ContactForm() {
           disabled={loading}
           className="flex items-center justify-center gap-2 w-full py-3.5 bg-[var(--gold)] text-white rounded-xl font-semibold text-sm hover:bg-[#b5671e] transition-all hover:-translate-y-0.5 hover:shadow-lg disabled:bg-gray-400 disabled:hover:bg-gray-400 disabled:hover:-translate-y-0 disabled:cursor-not-allowed"
         >
-          {loading ? "Wird übermittelt..." : "Jetzt Rückruf anfordern"}
+          {loading ? "Wird übermittelt..." : "Jetzt Rückruf anfordern & berechnen lassen"}
           {!loading && <ArrowRight size={17} />}
         </button>
 
