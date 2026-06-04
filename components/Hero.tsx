@@ -50,27 +50,27 @@ export default function Hero() {
                 </div>
               ))}
             </div>
-
-            {/* Hundefotos */}
-            <div className="grid grid-cols-2 gap-2">
-              {[
-                { src: "/hund1.jpg" },
-                { src: "/hund2.jpg" },
-                { src: "/hund3.jpg" },
-                { src: "/flyer-bild.jpg", position: "center 15%" },
-                { src: "/hund4.jpg", span: true },
-              ].map(({ src, position, span }, i) => (
-                <div key={i} className={`rounded-2xl overflow-hidden aspect-square ${span ? "col-span-2 aspect-video" : ""}`}>
-                  <img
-                    src={src}
-                    alt="Hund"
-                    className="w-full h-full object-cover"
-                    style={position ? { objectPosition: position } : undefined}
-                  />
-                </div>
-              ))}
-            </div>
           </div>
+        </div>
+
+        {/* Hundefotos – volle Breite, bündig mit dem Formular */}
+        <div className="mt-4 grid grid-cols-5 gap-2">
+          {[
+            { src: "/hund1.jpg" },
+            { src: "/hund2.jpg" },
+            { src: "/hund3.jpg" },
+            { src: "/flyer-bild.jpg", position: "center 15%" },
+            { src: "/hund4.jpg" },
+          ].map(({ src, position }, i) => (
+            <div key={i} className="rounded-2xl overflow-hidden aspect-square">
+              <img
+                src={src}
+                alt="Hund"
+                className="w-full h-full object-cover"
+                style={position ? { objectPosition: position } : undefined}
+              />
+            </div>
+          ))}
         </div>
       </div>
     </section>
