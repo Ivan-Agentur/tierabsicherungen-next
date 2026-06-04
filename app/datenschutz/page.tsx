@@ -20,7 +20,7 @@ export default function Datenschutz() {
           >
             Datenschutz&shy;erklärung
           </h1>
-          <p className="text-gray-400 text-sm mb-10">Stand: Mai 2026</p>
+          <p className="text-gray-400 text-sm mb-10">Stand: Juni 2026</p>
 
           <div className="flex flex-col gap-6">
 
@@ -149,21 +149,77 @@ export default function Datenschutz() {
                 Diese Website wird gehostet bei der <strong>Strato AG</strong>,
                 Pascalstraße 10, 10587 Berlin. Mit Strato besteht ein
                 Auftragsverarbeitungsvertrag (AVV) gemäß Art. 28 DSGVO. Die Server
-                befinden sich in Deutschland.
+                befinden sich in Deutschland. Der Hoster erhebt automatisch Server-Logfiles
+                (IP-Adressen, Zugriffszeitpunkte, Browserinformationen) zur Fehlerbehebung
+                und Sicherstellung des Betriebs.
               </p>
             </Section>
 
-            <Section title="8. Cookies">
+            <Section title="8. SSL/TLS-Verschlüsselung">
               <p>
-                Diese Website verwendet ausschließlich technisch notwendige Cookies, die
-                für den Betrieb der Website erforderlich sind. Es werden keine
-                Tracking-Cookies, Analyse-Cookies oder Cookies von Drittanbietern zu
-                Werbezwecken eingesetzt. Eine Einwilligung ist für technisch notwendige
-                Cookies nicht erforderlich.
+                Diese Website nutzt aus Sicherheitsgründen und zum Schutz der Übertragung
+                vertraulicher Inhalte eine SSL- bzw. TLS-Verschlüsselung. Eine verschlüsselte
+                Verbindung erkennen Sie daran, dass die Adresszeile des Browsers von
+                „http://" auf „https://" wechselt und am Schloss-Symbol in Ihrer Browserzeile.
+              </p>
+              <p className="mt-3">
+                Wenn die SSL- bzw. TLS-Verschlüsselung aktiviert ist, können die Daten,
+                die Sie an uns übermitteln, nicht von Dritten mitgelesen werden.
               </p>
             </Section>
 
-            <Section title="9. Ihre Rechte">
+            <Section title="9. WhatsApp-Kommunikation">
+              <p>
+                Sie haben die Möglichkeit, uns über WhatsApp zu kontaktieren. WhatsApp ist
+                ein Dienst der <strong>Meta Platforms Ireland Limited</strong>, 4 Grand Canal
+                Square, Grand Canal Harbour, Dublin 2, Irland (Meta).
+              </p>
+              <p className="mt-3">
+                Bei der Nutzung von WhatsApp werden Ihre Nachrichten über die Server von Meta
+                übertragen und verarbeitet. Dabei können Daten in Länder außerhalb der EU
+                übermittelt werden. Meta hat sich zur Einhaltung der Standardvertragsklauseln
+                der EU-Kommission verpflichtet.
+              </p>
+              <p className="mt-3">
+                Die Nutzung von WhatsApp erfolgt auf Basis Ihrer Einwilligung (Art. 6 Abs. 1
+                lit. a DSGVO). Sie können diese Einwilligung jederzeit widerrufen, indem Sie
+                uns über einen anderen Kanal kontaktieren. Weitere Informationen zum
+                Datenschutz bei Meta finden Sie unter:{" "}
+                <a
+                  href="https://www.whatsapp.com/legal/privacy-policy"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[var(--gold)] hover:underline"
+                >
+                  whatsapp.com/legal/privacy-policy
+                </a>
+              </p>
+            </Section>
+
+            <Section title="10. Cookies & Analyse">
+              <p>
+                Diese Website verwendet technisch notwendige Cookies, die für den Betrieb
+                der Website erforderlich sind. Für weitere Cookies und Analyse-Tools wird
+                Ihre Einwilligung über einen Cookie-Banner eingeholt.
+              </p>
+              <p className="mt-3">
+                <strong>Technisch notwendige Cookies:</strong> Diese Cookies sind für die
+                Grundfunktionen der Website erforderlich und können nicht deaktiviert werden.
+                Eine Einwilligung ist nicht erforderlich.
+              </p>
+              <p className="mt-3">
+                <strong>Google Analytics:</strong> Diese Website ist für die Nutzung von
+                Google Analytics (Google LLC, USA) vorbereitet, jedoch derzeit noch nicht
+                aktiviert. Sobald aktiviert, wird dies im Cookie-Banner angezeigt und Ihre
+                Einwilligung eingeholt. Google Analytics verwendet Cookies zur Analyse der
+                Websitenutzung. Die dabei erzeugten Daten werden auf Servern von Google in
+                den USA gespeichert. Rechtsgrundlage wäre Art. 6 Abs. 1 lit. a DSGVO
+                (Einwilligung). Sie können Ihre Einwilligung jederzeit über den Cookie-Banner
+                widerrufen.
+              </p>
+            </Section>
+
+            <Section title="11. Ihre Rechte">
               <p>Sie haben gemäß DSGVO folgende Rechte gegenüber dem Verantwortlichen:</p>
               <ul className="mt-3 space-y-1.5 list-disc list-inside text-[var(--foreground)]">
                 <li><strong>Auskunft</strong> (Art. 15 DSGVO): Informationen über Ihre gespeicherten Daten</li>
@@ -182,7 +238,7 @@ export default function Datenschutz() {
               </p>
             </Section>
 
-            <Section title="10. Beschwerderecht bei der Aufsichtsbehörde">
+            <Section title="12. Beschwerderecht bei der Aufsichtsbehörde">
               <p>
                 Sie haben das Recht, sich bei einer Datenschutz-Aufsichtsbehörde über die
                 Verarbeitung Ihrer personenbezogenen Daten zu beschweren. Die zuständige
