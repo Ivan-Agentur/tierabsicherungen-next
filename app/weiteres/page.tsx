@@ -148,8 +148,17 @@ export default function WeiteresPage() {
         </section>
 
         {/* Rechtstipps */}
-        <section className="py-14 px-6 bg-white border-t border-[var(--border-col)]">
-          <div className="max-w-5xl mx-auto">
+        <section
+          className="py-14 px-6 relative border-t border-[var(--border-col)]"
+          style={{
+            backgroundImage: "url('/faq-hintergrund.jpg')",
+            backgroundSize: "cover",
+            backgroundPosition: "center top",
+            backgroundAttachment: "fixed",
+          }}
+        >
+          <div className="absolute inset-0 bg-white/80 backdrop-blur-[2px]" />
+          <div className="relative max-w-5xl mx-auto">
             <div className="text-center mb-10">
               <h2
                 className="text-2xl md:text-3xl text-[var(--navy)] mb-2"
