@@ -129,7 +129,7 @@ export default function ContactForm() {
     <div className="bg-white rounded-2xl border border-[var(--border-col)] p-6 sm:p-8">
       <h2
         className="text-base sm:text-lg text-[var(--navy)] mb-5 pb-4 border-b border-[var(--cream-dark)]"
-        style={{ fontFamily: "var(--font-playfair)" }}
+        style={{ fontFamily: "Helvetica, Arial, sans-serif" }}
       >
         Rückruf anfordern & Beitrag berechnen lassen
       </h2>
