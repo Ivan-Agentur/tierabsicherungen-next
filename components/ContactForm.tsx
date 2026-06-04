@@ -286,7 +286,7 @@ export default function ContactForm() {
           disabled={loading}
           className="flex items-center justify-center gap-2 w-full py-3.5 bg-[var(--gold)] text-white rounded-xl font-semibold text-sm hover:bg-[#b5671e] transition-all hover:-translate-y-0.5 hover:shadow-lg disabled:bg-gray-400 disabled:hover:bg-gray-400 disabled:hover:-translate-y-0 disabled:cursor-not-allowed"
         >
-          {loading ? "Wird übermittelt..." : "Jetzt Rückruf anfordern & berechnen lassen"}
+          {loading ? "Wird übermittelt..." : "Jetzt Rückruf anfordern"}
           {!loading && <ArrowRight size={17} />}
         </button>
 
