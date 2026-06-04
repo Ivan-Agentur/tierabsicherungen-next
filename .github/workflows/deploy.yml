@@ -28,6 +28,6 @@ jobs:
             set sftp:auto-confirm yes;
             set net:timeout 30;
             open -u '${{ secrets.SSH_USER }}','${{ secrets.SSH_PASS }}' sftp://${{ secrets.SSH_HOST }};
-            mirror --reverse --delete --verbose out/ ${{ secrets.SSH_DIR }};
+            mirror --reverse --delete --verbose --ignore-errors out/ ${{ secrets.SSH_DIR }};
             bye
           "
