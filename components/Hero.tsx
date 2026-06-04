@@ -54,17 +54,18 @@ export default function Hero() {
             {/* Hundefotos */}
             <div className="grid grid-cols-2 gap-2">
               {[
-                "/hund1.jpg",
-                "/hund2.jpg",
-                "/hund3.jpg",
-                "/flyer-bild.jpg",
-              ].map((src, i) => (
-                <div key={i} className="rounded-2xl overflow-hidden aspect-square">
+                { src: "/hund1.jpg" },
+                { src: "/hund2.jpg" },
+                { src: "/hund3.jpg" },
+                { src: "/flyer-bild.jpg", position: "center 15%" },
+                { src: "/hund4.jpg", span: true },
+              ].map(({ src, position, span }, i) => (
+                <div key={i} className={`rounded-2xl overflow-hidden aspect-square ${span ? "col-span-2 aspect-video" : ""}`}>
                   <img
                     src={src}
                     alt="Hund"
                     className="w-full h-full object-cover"
-                    style={i === 3 ? { objectPosition: "center 15%" } : undefined}
+                    style={position ? { objectPosition: position } : undefined}
                   />
                 </div>
               ))}
