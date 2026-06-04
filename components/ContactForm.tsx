@@ -128,10 +128,10 @@ export default function ContactForm() {
   return (
     <div className="bg-white rounded-2xl border border-[var(--border-col)] p-6 sm:p-8">
       <h2
-        className="text-xl text-[var(--navy)] mb-5 pb-4 border-b border-[var(--cream-dark)]"
+        className="text-base sm:text-lg text-[var(--navy)] mb-5 pb-4 border-b border-[var(--cream-dark)]"
         style={{ fontFamily: "var(--font-playfair)" }}
       >
-        Rückruf anfordern & berechnen lassen
+        Rückruf anfordern & Beitrag berechnen lassen
       </h2>
 
       <form onSubmit={handleSubmit} className="flex flex-col gap-4" noValidate>
