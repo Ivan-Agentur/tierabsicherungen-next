@@ -64,6 +64,7 @@ export default function Hero() {
                     src={src}
                     alt="Hund"
                     className="w-full h-full object-cover"
+                    style={i === 3 ? { objectPosition: "center 15%" } : undefined}
                   />
                 </div>
               ))}
