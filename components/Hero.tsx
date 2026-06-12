@@ -54,18 +54,20 @@ export default function Hero() {
             {/* Hundefotos – füllen den verbleibenden Platz bis zur Formular-Unterkante */}
             <div
               className="flex-1 min-h-0 grid grid-cols-2 gap-2"
-              style={{ gridTemplateRows: "repeat(2, 1fr)" }}
+              style={{ gridTemplateRows: "repeat(3, 1fr)" }}
             >
               {[
-                { src: "/hund1.jpg" },
-                { src: "/hund2.jpg" },
-                { src: "/hund3.jpg" },
-                { src: "/hund4.jpg" },
-              ].map(({ src }, i) => (
+                { src: "/hund1.jpg", alt: "Hund" },
+                { src: "/katze1.jpg", alt: "Katze" },
+                { src: "/hund2.jpg", alt: "Hund" },
+                { src: "/katze2.jpg", alt: "Katze" },
+                { src: "/hund3.jpg", alt: "Hund" },
+                { src: "/katze3.jpg", alt: "Katze" },
+              ].map(({ src, alt }, i) => (
                 <div key={i} className="rounded-2xl overflow-hidden">
                   <img
                     src={src}
-                    alt="Hund"
+                    alt={alt}
                     className="w-full h-full object-cover"
                   />
                 </div>
