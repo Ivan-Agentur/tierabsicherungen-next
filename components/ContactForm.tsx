@@ -15,6 +15,7 @@ type FormData = {
   alter: string;
   rasse: string;
   wannAnrufen: string;
+  rabattCode: string;
   fragen: string;
   datenschutz: boolean;
 };
@@ -22,7 +23,7 @@ type FormData = {
 const initial: FormData = {
   vorname: "", nachname: "", email: "", telefon: "",
   haustiername: "", tierart: "", gechipt: "", alter: "", rasse: "",
-  wannAnrufen: "", fragen: "", datenschutz: false,
+  wannAnrufen: "", rabattCode: "", fragen: "", datenschutz: false,
 };
 
 export default function ContactForm() {
@@ -213,34 +214,38 @@ export default function ContactForm() {
           {field("rasse", "Rasse", "text", "z. B. Labrador", true)}
         </div>
 
-        {/* Wann anrufen */}
-        <div className="flex flex-col gap-1">
-          <label className="text-xs font-semibold uppercase tracking-wide text-[var(--navy)]">
-            Wann sollen wir Sie anrufen?{" "}
-            <span className="text-gray-400 normal-case font-normal tracking-normal">(optional)</span>
-          </label>
-          <div className="flex flex-wrap items-center gap-x-6 gap-y-2 pt-1">
-            {[
-              { value: "vormittags", label: "Vormittags" },
-              { value: "nachmittags", label: "Nachmittags" },
-              { value: "abends", label: "Abends" },
-            ].map(({ value, label }) => (
-              <label key={value} className="inline-flex items-center gap-2 text-sm cursor-pointer">
-                <input
-                  type="radio"
-                  name="wannAnrufen"
-                  value={value}
-                  checked={data.wannAnrufen === value}
-                  onChange={(e) => {
-                    setData((p) => ({ ...p, wannAnrufen: e.target.value }));
-                    setErrors((p) => ({ ...p, wannAnrufen: false }));
-                  }}
-                  className="h-4 w-4 accent-[var(--gold)]"
-                />
-                {label}
-              </label>
-            ))}
+        {/* Wann anrufen + Rabatt-Code */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div className="flex flex-col gap-1">
+            <label className="text-xs font-semibold uppercase tracking-wide text-[var(--navy)]">
+              Wann sollen wir Sie anrufen?{" "}
+              <span className="text-gray-400 normal-case font-normal tracking-normal">(optional)</span>
+            </label>
+            <div className="flex flex-wrap items-center gap-x-6 gap-y-2 pt-1">
+              {[
+                { value: "vormittags", label: "Vormittags" },
+                { value: "nachmittags", label: "Nachmittags" },
+                { value: "abends", label: "Abends" },
+              ].map(({ value, label }) => (
+                <label key={value} className="inline-flex items-center gap-2 text-sm cursor-pointer">
+                  <input
+                    type="radio"
+                    name="wannAnrufen"
+                    value={value}
+                    checked={data.wannAnrufen === value}
+                    onChange={(e) => {
+                      setData((p) => ({ ...p, wannAnrufen: e.target.value }));
+                      setErrors((p) => ({ ...p, wannAnrufen: false }));
+                    }}
+                    className="h-4 w-4 accent-[var(--gold)]"
+                  />
+                  {label}
+                </label>
+              ))}
+            </div>
           </div>
+
+          {field("rabattCode", "Rabatt-Code", "text", "z. B. SOMMER25", true)}
         </div>
 
         {/* Fragen */}
